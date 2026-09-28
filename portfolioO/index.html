@@ -1,0 +1,3771 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Shrouk Ali | Cybersecurity Portfolio</title>
+
+    <meta
+        name="description"
+        content="Shrouk Ali — Cybersecurity graduate focused on SOC operations, security monitoring, network security, incident response and vulnerability assessment."
+    >
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link
+        href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Space+Grotesk:wght@400;500;600;700&display=swap"
+        rel="stylesheet"
+    >
+
+    <style>
+
+        :root {
+            --bg: #09050a;
+            --bg-soft: #110810;
+            --card: rgba(25, 11, 23, 0.72);
+
+            --pink: #ff3f9f;
+            --pink-light: #ff76bd;
+            --pink-dark: #d51b78;
+
+            --purple: #a855f7;
+
+            --text: #fff5fb;
+            --muted: #b9aab5;
+
+            --border: rgba(255, 77, 163, 0.18);
+
+            --shadow:
+                0 25px 80px rgba(0, 0, 0, 0.45);
+
+            --radius: 24px;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family: "DM Sans", sans-serif;
+
+            background:
+                radial-gradient(
+                    circle at 15% 10%,
+                    rgba(255, 45, 151, 0.11),
+                    transparent 28%
+                ),
+                radial-gradient(
+                    circle at 90% 20%,
+                    rgba(168, 85, 247, 0.10),
+                    transparent 25%
+                ),
+                var(--bg);
+
+            color: var(--text);
+            overflow-x: hidden;
+        }
+
+        a {
+            color: inherit;
+            text-decoration: none;
+        }
+
+        button {
+            font-family: inherit;
+        }
+
+        ::selection {
+            background: rgba(255, 63, 159, 0.3);
+            color: white;
+        }
+
+        .background-orb {
+            position: fixed;
+            width: 420px;
+            height: 420px;
+            border-radius: 50%;
+            filter: blur(110px);
+            opacity: 0.13;
+            pointer-events: none;
+            z-index: -2;
+        }
+
+        .orb-one {
+            background: var(--pink);
+            top: -180px;
+            left: -150px;
+        }
+
+        .orb-two {
+            background: var(--purple);
+            right: -170px;
+            top: 35%;
+        }
+
+        .orb-three {
+            background: var(--pink-dark);
+            left: 30%;
+            bottom: -250px;
+        }
+
+        #mouseGlow {
+            position: fixed;
+            width: 320px;
+            height: 320px;
+            border-radius: 50%;
+
+            background:
+                radial-gradient(
+                    circle,
+                    rgba(255, 63, 159, 0.09),
+                    transparent 70%
+                );
+
+            transform: translate(-50%, -50%);
+            pointer-events: none;
+            z-index: -1;
+        }
+
+        .navbar {
+            position: fixed;
+            top: 18px;
+            left: 50%;
+            transform: translateX(-50%);
+
+            width: min(1180px, calc(100% - 30px));
+
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+
+            padding: 13px 18px;
+
+            background: rgba(12, 7, 12, 0.72);
+
+            border: 1px solid var(--border);
+
+            backdrop-filter: blur(20px);
+            -webkit-backdrop-filter: blur(20px);
+
+            border-radius: 18px;
+
+            z-index: 1000;
+        }
+
+        .brand {
+            font-family: "Space Grotesk", sans-serif;
+            font-size: 21px;
+            font-weight: 700;
+            letter-spacing: -0.5px;
+        }
+
+        .brand span {
+            color: var(--pink);
+        }
+
+        .nav-links {
+            display: flex;
+            align-items: center;
+            gap: 5px;
+        }
+
+        .nav-links a {
+            color: #bcaeb8;
+            font-size: 13px;
+            font-weight: 500;
+            padding: 9px 11px;
+            border-radius: 10px;
+            transition: 0.25s ease;
+        }
+
+        .nav-links a:hover,
+        .nav-links a.active {
+            color: white;
+            background: rgba(255, 63, 159, 0.1);
+        }
+
+        .container {
+            width: min(1120px, calc(100% - 36px));
+            margin: auto;
+        }
+
+        section {
+            padding: 105px 0;
+            scroll-margin-top: 90px;
+        }
+
+        .section-label {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            color: var(--pink-light);
+            font-size: 12px;
+            font-weight: 700;
+            letter-spacing: 1.8px;
+            text-transform: uppercase;
+            margin-bottom: 14px;
+        }
+
+        .section-label::before {
+            content: "";
+            width: 22px;
+            height: 1px;
+            background: var(--pink);
+        }
+
+        .section-title {
+            font-family: "Space Grotesk", sans-serif;
+            font-size: clamp(32px, 5vw, 50px);
+            line-height: 1.05;
+            letter-spacing: -1.5px;
+            margin-bottom: 18px;
+        }
+
+        .section-description {
+            max-width: 650px;
+            color: var(--muted);
+            line-height: 1.8;
+        }
+
+        .hero {
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            padding-top: 145px;
+            padding-bottom: 70px;
+        }
+
+        .hero-grid {
+            display: grid;
+            grid-template-columns: 1.15fr 0.85fr;
+            gap: 70px;
+            align-items: center;
+        }
+
+        .hero-status {
+            display: inline-flex;
+            align-items: center;
+            gap: 9px;
+            padding: 8px 13px;
+
+            border: 1px solid rgba(255, 63, 159, 0.2);
+
+            background: rgba(255, 63, 159, 0.055);
+
+            border-radius: 999px;
+
+            color: #eec8dc;
+            font-size: 12px;
+            font-weight: 600;
+
+            margin-bottom: 25px;
+        }
+
+        .hero-status i {
+            width: 7px;
+            height: 7px;
+            border-radius: 50%;
+            background: #ff4ca5;
+
+            box-shadow: 0 0 14px #ff4ca5;
+        }
+
+        .hero h1 {
+            font-family: "Space Grotesk", sans-serif;
+            font-size: clamp(40px, 5.5vw, 68px);
+            line-height: 1.05;
+            letter-spacing: -2.8px;
+            max-width: 800px;
+            margin-bottom: 28px;
+            font-weight: 700;
+        }
+
+        .hero h1 .highlight {
+            color: var(--pink);
+            font-size: inherit;
+            font-weight: inherit;
+            line-height: inherit;
+            letter-spacing: inherit;
+        }
+
+        .hero-description {
+            max-width: 690px;
+            color: #bcaeb8;
+            font-size: 16px;
+            line-height: 1.85;
+            margin-bottom: 32px;
+        }
+
+        .hero-actions {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            flex-wrap: wrap;
+        }
+
+        .btn {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            gap: 8px;
+
+            min-height: 48px;
+            padding: 0 19px;
+
+            border-radius: 13px;
+
+            font-size: 13px;
+            font-weight: 700;
+
+            transition: 0.25s ease;
+        }
+
+        .btn-primary {
+            color: white;
+
+            background:
+                linear-gradient(
+                    135deg,
+                    #ff3f9f,
+                    #db217f
+                );
+
+            box-shadow:
+                0 12px 35px
+                rgba(255, 63, 159, 0.18);
+        }
+
+        .btn-primary:hover {
+            transform: translateY(-3px);
+
+            box-shadow:
+                0 18px 40px
+                rgba(255, 63, 159, 0.28);
+        }
+
+        .btn-outline {
+            border:
+                1px solid
+                rgba(255, 255, 255, 0.1);
+
+            color: #eee;
+
+            background:
+                rgba(255, 255, 255, 0.025);
+        }
+
+        .btn-outline:hover {
+            border-color:
+                rgba(255, 63, 159, 0.4);
+
+            background:
+                rgba(255, 63, 159, 0.07);
+
+            transform: translateY(-3px);
+        }
+
+        .hero-links {
+            display: flex;
+            gap: 22px;
+            margin-top: 25px;
+        }
+
+        .hero-links a {
+            color: #998a95;
+            font-size: 12px;
+            transition: 0.2s;
+        }
+
+        .hero-links a:hover {
+            color: var(--pink-light);
+        }
+
+        .hero-visual {
+            position: relative;
+            display: flex;
+            justify-content: center;
+        }
+
+        .profile-wrap {
+            position: relative;
+            width: min(420px, 82vw);
+            aspect-ratio: 1;
+
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .profile-wrap::before {
+            content: "";
+            position: absolute;
+
+            width: 470px;
+            height: 470px;
+
+            border-radius: 50%;
+
+            background:
+                radial-gradient(
+                    circle,
+                    rgba(255, 63, 159, 0.25) 0%,
+                    rgba(255, 63, 159, 0.14) 28%,
+                    rgba(168, 85, 247, 0.10) 48%,
+                    transparent 72%
+                );
+
+            filter: blur(5px);
+            z-index: -3;
+
+            animation:
+                pulseHalo
+                4s
+                ease-in-out
+                infinite;
+        }
+
+        .profile-wrap::after {
+            content: "";
+
+            position: absolute;
+
+            width: 94%;
+            height: 94%;
+
+            border-radius: 50%;
+
+            border:
+                1px dashed
+                rgba(255, 63, 159, 0.22);
+
+            box-shadow:
+                0 0 35px rgba(255, 63, 159, 0.08);
+
+            animation:
+                reverseRing
+                25s
+                linear
+                infinite;
+
+            pointer-events: none;
+            z-index: 0;
+        }
+
+        @keyframes pulseHalo {
+
+            0%,
+            100% {
+                transform: scale(0.96);
+                opacity: 0.78;
+            }
+
+            50% {
+                transform: scale(1.05);
+                opacity: 1;
+            }
+        }
+
+        @keyframes reverseRing {
+
+            to {
+                transform: rotate(-360deg);
+            }
+        }
+
+        .profile-ring {
+            position: absolute;
+            inset: 0;
+
+            border-radius: 50%;
+
+            border:
+                1px solid
+                rgba(255, 63, 159, 0.32);
+
+            box-shadow:
+                0 0 50px
+                rgba(255, 63, 159, 0.08);
+
+            animation:
+                rotateRing
+                18s
+                linear
+                infinite;
+
+            z-index: 1;
+        }
+
+        .profile-ring::before,
+        .profile-ring::after {
+            content: "";
+
+            position: absolute;
+
+            width: 10px;
+            height: 10px;
+
+            border-radius: 50%;
+
+            background: var(--pink);
+
+            box-shadow:
+                0 0 20px var(--pink),
+                0 0 35px rgba(255, 63, 159, 0.55);
+        }
+
+        .profile-ring::before {
+            top: 10%;
+            left: 13%;
+        }
+
+        .profile-ring::after {
+            bottom: 11%;
+            right: 10%;
+        }
+
+        @keyframes rotateRing {
+
+            to {
+                transform: rotate(360deg);
+            }
+        }
+
+        .profile-wrap .profile-card::before {
+            content: "";
+
+            position: absolute;
+            inset: 14px;
+
+            border-radius: 50%;
+
+            border:
+                1px solid
+                rgba(255, 118, 189, 0.14);
+
+            box-shadow:
+                inset 0 0 30px
+                rgba(255, 63, 159, 0.08);
+
+            z-index: 3;
+            pointer-events: none;
+        }
+
+        .profile-card {
+            position: absolute;
+            inset: 42px;
+
+            border-radius: 50%;
+            overflow: hidden;
+
+            border:
+                1px solid
+                rgba(255, 63, 159, 0.48);
+
+            background:
+                radial-gradient(
+                    circle at center,
+                    rgba(255, 63, 159, 0.16),
+                    rgba(17, 8, 16, 0.96)
+                );
+
+            box-shadow:
+                0 0 90px
+                rgba(255, 63, 159, 0.18),
+                0 0 30px
+                rgba(168, 85, 247, 0.10),
+                inset 0 0 35px
+                rgba(255, 63, 159, 0.08);
+
+            z-index: 2;
+        }
+
+        .profile-card::after {
+            content: "";
+
+            position: absolute;
+            inset: 0;
+
+            border-radius: 50%;
+
+            background:
+                linear-gradient(
+                    135deg,
+                    rgba(255, 255, 255, 0.08),
+                    transparent 30%,
+                    transparent 65%,
+                    rgba(255, 63, 159, 0.10)
+                );
+
+            pointer-events: none;
+            z-index: 4;
+        }
+
+        .profile-card img {
+            width: 100%;
+            height: 100%;
+
+            object-fit: cover;
+            display: block;
+
+            transition:
+                transform 0.6s ease,
+                filter 0.6s ease;
+        }
+
+        .profile-card:hover img {
+            transform: scale(1.035);
+
+            filter:
+                saturate(1.08)
+                contrast(1.03);
+        }
+
+        .profile-fallback {
+            position: absolute;
+            inset: 0;
+
+            display: none;
+
+            align-items: center;
+            justify-content: center;
+
+            font-family:
+                "Space Grotesk",
+                sans-serif;
+
+            font-size: 90px;
+            font-weight: 700;
+
+            color: var(--pink);
+
+            background:
+                radial-gradient(
+                    circle,
+                    rgba(255, 63, 159, 0.15),
+                    transparent 65%
+                );
+        }
+
+        .profile-badge {
+            position: absolute;
+
+            right: -4px;
+            bottom: 48px;
+
+            padding: 13px 16px;
+
+            background:
+                rgba(16, 8, 15, 0.9);
+
+            border:
+                1px solid
+                rgba(255, 63, 159, 0.25);
+
+            backdrop-filter: blur(16px);
+
+            border-radius: 15px;
+
+            box-shadow: var(--shadow);
+
+            z-index: 5;
+        }
+
+        .profile-badge strong {
+            display: block;
+            color: white;
+            font-size: 12px;
+        }
+
+        .profile-badge span {
+            display: block;
+            color: #9d8d98;
+            font-size: 10px;
+            margin-top: 3px;
+        }
+
+        .about-layout {
+            display: grid;
+            grid-template-columns: 0.8fr 1.2fr;
+            gap: 80px;
+            align-items: start;
+        }
+
+        .about-intro {
+            font-family:
+                "Space Grotesk",
+                sans-serif;
+
+            font-size:
+                clamp(27px, 3vw, 39px);
+
+            line-height: 1.2;
+            letter-spacing: -1px;
+        }
+
+        .about-intro span {
+            color: var(--pink);
+        }
+
+        .about-text {
+            color: var(--muted);
+            line-height: 1.9;
+            margin-bottom: 20px;
+        }
+
+        .about-highlights {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 12px;
+            margin-top: 30px;
+        }
+
+        .about-highlight {
+            padding: 18px;
+
+            border:
+                1px solid
+                var(--border);
+
+            background:
+                rgba(255, 255, 255, 0.018);
+
+            border-radius: 16px;
+            transition: 0.25s ease;
+        }
+
+        .about-highlight:hover {
+            transform: translateY(-4px);
+
+            border-color:
+                rgba(255, 63, 159, 0.3);
+
+            background:
+                rgba(255, 63, 159, 0.035);
+        }
+
+        .about-highlight strong {
+            display: block;
+
+            font-family:
+                "Space Grotesk",
+                sans-serif;
+
+            font-size: 18px;
+            color: white;
+            margin-bottom: 5px;
+        }
+
+        .about-highlight span {
+            color: #91828d;
+            font-size: 12px;
+        }
+
+        .skills-header {
+            display: flex;
+            justify-content: space-between;
+            gap: 30px;
+            align-items: end;
+            margin-bottom: 45px;
+        }
+
+        .skills-tree {
+            position: relative;
+
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 18px;
+        }
+
+        .skill-card {
+            position: relative;
+
+            min-height: 160px;
+            padding: 25px 20px;
+
+            border:
+                1px solid
+                var(--border);
+
+            border-radius: 20px;
+
+            background:
+                linear-gradient(
+                    145deg,
+                    rgba(255, 63, 159, 0.07),
+                    rgba(255, 255, 255, 0.015)
+                );
+
+            cursor: pointer;
+
+            transition:
+                transform 0.25s ease,
+                border-color 0.25s ease,
+                background 0.25s ease;
+        }
+
+        .skill-card:hover {
+            transform: translateY(-7px);
+
+            border-color:
+                rgba(255, 63, 159, 0.4);
+
+            background:
+                linear-gradient(
+                    145deg,
+                    rgba(255, 63, 159, 0.12),
+                    rgba(255, 255, 255, 0.025)
+                );
+        }
+
+        .skill-number {
+            color: #765f6d;
+            font-size: 10px;
+            font-weight: 700;
+            letter-spacing: 1px;
+        }
+
+        .skill-icon {
+            width: 42px;
+            height: 42px;
+
+            display: flex;
+            align-items: center;
+            justify-content: center;
+
+            border-radius: 12px;
+
+            margin: 20px 0 17px;
+
+            color: var(--pink);
+
+            background:
+                rgba(255, 63, 159, 0.08);
+
+            font-size: 18px;
+            font-weight: 700;
+        }
+
+        .skill-card h3 {
+            font-family:
+                "Space Grotesk",
+                sans-serif;
+
+            font-size: 16px;
+            margin-bottom: 7px;
+        }
+
+        .skill-card p {
+            color: #8f818b;
+            font-size: 11px;
+            line-height: 1.6;
+        }
+
+        .work-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 18px;
+            margin-top: 42px;
+        }
+
+        .work-card {
+            overflow: hidden;
+
+            border:
+                1px solid
+                var(--border);
+
+            border-radius: 18px;
+
+            background:
+                rgba(255, 255, 255, 0.018);
+
+            cursor: pointer;
+            transition: 0.25s ease;
+        }
+
+        .work-card:hover {
+            transform: translateY(-6px);
+
+            border-color:
+                rgba(255, 63, 159, 0.4);
+
+            box-shadow:
+                0 18px 50px
+                rgba(0, 0, 0, 0.28);
+        }
+
+        .work-preview {
+            position: relative;
+
+            height: 190px;
+            overflow: hidden;
+
+            display: flex;
+            align-items: center;
+            justify-content: center;
+
+            background:
+                radial-gradient(
+                    circle at 25% 30%,
+                    rgba(255, 63, 159, 0.20),
+                    transparent 35%
+                ),
+                radial-gradient(
+                    circle at 80% 70%,
+                    rgba(168, 85, 247, 0.14),
+                    transparent 35%
+                ),
+                linear-gradient(
+                    135deg,
+                    #180b16,
+                    #0e0710
+                );
+
+            border-bottom:
+                1px solid
+                rgba(255, 63, 159, 0.13);
+        }
+
+        .work-preview::before {
+            content: "";
+
+            position: absolute;
+
+            width: 150px;
+            height: 150px;
+
+            border-radius: 50%;
+
+            border:
+                1px solid
+                rgba(255, 63, 159, 0.25);
+
+            box-shadow:
+                0 0 45px
+                rgba(255, 63, 159, 0.12);
+
+            animation:
+                workRotate
+                12s
+                linear
+                infinite;
+        }
+
+        .work-preview::after {
+            content: "";
+
+            position: absolute;
+
+            width: 70px;
+            height: 70px;
+
+            border-radius: 50%;
+
+            border:
+                1px solid
+                rgba(255, 118, 189, 0.28);
+        }
+
+        @keyframes workRotate {
+
+            to {
+                transform: rotate(360deg);
+            }
+        }
+
+        .work-number {
+            position: relative;
+
+            z-index: 2;
+
+            font-family:
+                "Space Grotesk",
+                sans-serif;
+
+            font-size: 45px;
+            font-weight: 700;
+
+            color: rgba(255, 118, 189, 0.8);
+
+            text-shadow:
+                0 0 25px
+                rgba(255, 63, 159, 0.35);
+        }
+
+        .work-icon {
+            position: absolute;
+
+            top: 16px;
+            right: 16px;
+
+            width: 34px;
+            height: 34px;
+
+            display: flex;
+
+            align-items: center;
+            justify-content: center;
+
+            border-radius: 10px;
+
+            color: var(--pink-light);
+
+            background:
+                rgba(10, 5, 10, 0.65);
+
+            border:
+                1px solid
+                rgba(255, 63, 159, 0.18);
+
+            font-size: 14px;
+        }
+
+        .work-info {
+            padding: 18px;
+        }
+
+        .work-tag {
+            display: inline-block;
+
+            color: var(--pink-light);
+
+            font-size: 10px;
+            font-weight: 700;
+
+            letter-spacing: 1px;
+            text-transform: uppercase;
+
+            margin-bottom: 9px;
+        }
+
+        .work-info h3 {
+            font-family:
+                "Space Grotesk",
+                sans-serif;
+
+            font-size: 16px;
+            line-height: 1.35;
+            margin-bottom: 7px;
+        }
+
+        .work-info span {
+            color: #81727d;
+            font-size: 11px;
+        }
+
+        .certificates-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 18px;
+            margin-top: 42px;
+        }
+
+        .certificate-card {
+            overflow: hidden;
+
+            border:
+                1px solid
+                var(--border);
+
+            border-radius: 18px;
+
+            background:
+                rgba(255, 255, 255, 0.018);
+
+            cursor: pointer;
+            transition: 0.25s ease;
+        }
+
+        .certificate-card:hover {
+            transform: translateY(-6px);
+
+            border-color:
+                rgba(255, 63, 159, 0.4);
+
+            box-shadow:
+                0 18px 50px
+                rgba(0, 0, 0, 0.28);
+        }
+
+        .certificate-image {
+            width: 100%;
+            height: 190px;
+
+            display: block;
+            object-fit: cover;
+
+            background:
+                linear-gradient(
+                    135deg,
+                    rgba(255, 63, 159, 0.08),
+                    rgba(168, 85, 247, 0.06)
+                );
+        }
+
+        .certificate-info {
+            padding: 18px;
+        }
+
+        .certificate-info h3 {
+            font-family:
+                "Space Grotesk",
+                sans-serif;
+
+            font-size: 15px;
+            line-height: 1.35;
+            margin-bottom: 7px;
+        }
+
+        .certificate-info span {
+            color: #81727d;
+            font-size: 11px;
+        }
+
+        .timeline {
+            margin-top: 45px;
+
+            border-left:
+                1px solid
+                rgba(255, 63, 159, 0.18);
+
+            padding-left: 30px;
+        }
+
+        .timeline-item {
+            position: relative;
+            padding-bottom: 45px;
+        }
+
+        .timeline-item:last-child {
+            padding-bottom: 0;
+        }
+
+        .timeline-item::before {
+            content: "";
+
+            position: absolute;
+
+            width: 9px;
+            height: 9px;
+
+            border-radius: 50%;
+
+            background: var(--pink);
+
+            box-shadow:
+                0 0 15px
+                rgba(255, 63, 159, 0.7);
+
+            left: -35px;
+            top: 5px;
+        }
+
+        .timeline-date {
+            color: var(--pink-light);
+            font-size: 11px;
+            font-weight: 700;
+            letter-spacing: 1px;
+            margin-bottom: 9px;
+        }
+
+        .timeline-item h3 {
+            font-family:
+                "Space Grotesk",
+                sans-serif;
+
+            font-size: 21px;
+            margin-bottom: 5px;
+        }
+
+        .timeline-item h4 {
+            color: #a28e9c;
+            font-size: 12px;
+            font-weight: 500;
+            margin-bottom: 12px;
+        }
+
+        .timeline-item p {
+            color: #8e808a;
+            font-size: 13px;
+            line-height: 1.75;
+            max-width: 700px;
+        }
+
+        .contact-box {
+            position: relative;
+            overflow: hidden;
+
+            padding: 55px;
+
+            border:
+                1px solid
+                rgba(255, 63, 159, 0.2);
+
+            border-radius: 28px;
+
+            background:
+                radial-gradient(
+                    circle at 80% 20%,
+                    rgba(255, 63, 159, 0.12),
+                    transparent 35%
+                ),
+                rgba(255, 255, 255, 0.018);
+
+            text-align: center;
+        }
+
+        .contact-box .section-label {
+            justify-content: center;
+        }
+
+        .contact-box h2 {
+            font-family:
+                "Space Grotesk",
+                sans-serif;
+
+            font-size:
+                clamp(34px, 5vw, 58px);
+
+            letter-spacing: -2px;
+
+            max-width: 650px;
+            margin: 0 auto 16px;
+        }
+
+        .contact-box p {
+            color: #9b8c96;
+            line-height: 1.8;
+            max-width: 650px;
+            margin: 0 auto 30px;
+        }
+
+        .contact-links {
+            display: flex;
+            gap: 12px;
+            flex-wrap: wrap;
+            justify-content: center;
+        }
+
+        .contact-link {
+            display: inline-flex;
+            align-items: center;
+            gap: 9px;
+
+            min-height: 45px;
+            padding: 0 15px;
+
+            border-radius: 12px;
+
+            border:
+                1px solid
+                rgba(255, 255, 255, 0.09);
+
+            background:
+                rgba(255, 255, 255, 0.025);
+
+            color: #ddd0d8;
+            font-size: 12px;
+
+            transition: 0.2s ease;
+        }
+
+        .contact-link:hover {
+            color: white;
+
+            border-color:
+                rgba(255, 63, 159, 0.35);
+
+            background:
+                rgba(255, 63, 159, 0.07);
+
+            transform: translateY(-2px);
+        }
+
+        .contact-icon {
+            width: 18px;
+            height: 18px;
+        }
+
+        footer {
+            padding: 30px 0 45px;
+            color: #665861;
+            font-size: 11px;
+            text-align: center;
+        }
+
+        .modal {
+            position: fixed;
+            inset: 0;
+
+            display: none;
+
+            align-items: center;
+            justify-content: center;
+
+            padding: 25px;
+
+            background:
+                rgba(3, 2, 4, 0.88);
+
+            backdrop-filter: blur(14px);
+            -webkit-backdrop-filter: blur(14px);
+
+            z-index: 5000;
+        }
+
+        .modal.show {
+            display: flex;
+            animation: modalIn 0.2s ease;
+        }
+
+        @keyframes modalIn {
+
+            from {
+                opacity: 0;
+            }
+
+            to {
+                opacity: 1;
+            }
+        }
+
+        .modal-content {
+            position: relative;
+
+            width: min(1000px, 95vw);
+            max-height: 92vh;
+
+            display: flex;
+            flex-direction: column;
+
+            background: #100910;
+
+            border:
+                1px solid
+                rgba(255, 63, 159, 0.25);
+
+            border-radius: 20px;
+            overflow: hidden;
+
+            box-shadow:
+                0 30px 100px
+                rgba(0, 0, 0, 0.7);
+        }
+
+        .modal-header {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+
+            padding: 15px 18px;
+
+            border-bottom:
+                1px solid
+                rgba(255, 255, 255, 0.06);
+        }
+
+        .modal-header h3 {
+            font-family:
+                "Space Grotesk",
+                sans-serif;
+
+            font-size: 14px;
+        }
+
+        .modal-close {
+            width: 36px;
+            height: 36px;
+
+            border: 0;
+            border-radius: 10px;
+
+            color: white;
+
+            background:
+                rgba(255, 255, 255, 0.06);
+
+            cursor: pointer;
+            font-size: 20px;
+
+            transition: 0.2s;
+        }
+
+        .modal-close:hover {
+            background:
+                rgba(255, 63, 159, 0.15);
+
+            color: var(--pink-light);
+        }
+
+        .modal-body {
+            padding: 18px;
+            overflow: auto;
+
+            display: flex;
+            justify-content: center;
+        }
+
+        .modal-body img {
+            display: block;
+
+            max-width: 100%;
+            max-height: 76vh;
+
+            object-fit: contain;
+            border-radius: 10px;
+        }
+
+        .work-modal-content {
+            width: min(760px, 95vw);
+        }
+
+        .work-modal-body {
+            padding: 30px;
+        }
+
+        .work-modal-label {
+            display: inline-block;
+
+            color: var(--pink-light);
+
+            font-size: 10px;
+            font-weight: 700;
+            letter-spacing: 1.4px;
+            text-transform: uppercase;
+
+            margin-bottom: 12px;
+        }
+
+        .work-modal-body h3 {
+            font-family:
+                "Space Grotesk",
+                sans-serif;
+
+            font-size:
+                clamp(27px, 4vw, 38px);
+
+            line-height: 1.1;
+            margin-bottom: 15px;
+        }
+
+        .work-modal-body p {
+            color: #a797a1;
+            line-height: 1.85;
+            font-size: 14px;
+        }
+
+        .work-modal-list {
+            margin-top: 22px;
+            display: grid;
+            gap: 10px;
+        }
+
+        .work-modal-list div {
+            display: flex;
+            align-items: flex-start;
+            gap: 10px;
+
+            color: #cbbdc6;
+            font-size: 13px;
+            line-height: 1.6;
+        }
+
+        .work-modal-list div::before {
+            content: "✦";
+            color: var(--pink);
+            flex-shrink: 0;
+        }
+
+        .skill-modal-content {
+            width: min(550px, 95vw);
+        }
+
+        .skill-modal-body {
+            padding: 28px;
+        }
+
+        .skill-modal-body h3 {
+            font-family:
+                "Space Grotesk",
+                sans-serif;
+
+            font-size: 27px;
+            margin-bottom: 13px;
+        }
+
+        .skill-modal-body p {
+            color: #a797a1;
+            line-height: 1.8;
+            font-size: 14px;
+        }
+
+        .modal-tags {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 8px;
+            margin-top: 20px;
+        }
+
+        .modal-tag {
+            padding: 7px 10px;
+
+            border-radius: 8px;
+
+            color: #d8c8d2;
+
+            background:
+                rgba(255, 63, 159, 0.07);
+
+            border:
+                1px solid
+                rgba(255, 63, 159, 0.12);
+
+            font-size: 10px;
+        }
+
+        .reveal {
+            opacity: 0;
+
+            transform:
+                translateY(25px);
+
+            transition:
+                opacity 0.7s ease,
+                transform 0.7s ease;
+        }
+
+        .reveal.visible {
+            opacity: 1;
+
+            transform:
+                translateY(0);
+        }
+
+        @media (max-width: 950px) {
+
+            .nav-links {
+                display: none;
+            }
+
+            .hero-grid {
+                grid-template-columns: 1fr;
+                gap: 60px;
+            }
+
+            .hero {
+                padding-top: 140px;
+            }
+
+            .hero-content {
+                text-align: center;
+            }
+
+            .hero-status,
+            .hero-actions,
+            .hero-links {
+                justify-content: center;
+            }
+
+            .hero-description {
+                margin-left: auto;
+                margin-right: auto;
+            }
+
+            .hero-visual {
+                order: -1;
+            }
+
+            .profile-wrap {
+                width: 330px;
+            }
+
+            .profile-wrap::before {
+                width: 350px;
+                height: 350px;
+            }
+
+            .about-layout {
+                grid-template-columns: 1fr;
+                gap: 35px;
+            }
+
+            .skills-tree {
+                grid-template-columns: repeat(2, 1fr);
+            }
+
+            .work-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+
+            .certificates-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+        }
+
+        @media (max-width: 650px) {
+
+            section {
+                padding: 80px 0;
+            }
+
+            .container {
+                width:
+                    min(
+                        100% - 28px,
+                        1120px
+                    );
+            }
+
+            .hero h1 {
+                font-size: 39px;
+                letter-spacing: -1.8px;
+                line-height: 1.08;
+            }
+
+            .hero h1 .highlight {
+                font-size: inherit;
+                font-weight: inherit;
+            }
+
+            .hero-description {
+                font-size: 14px;
+            }
+
+            .profile-wrap {
+                width: 270px;
+            }
+
+            .profile-wrap::before {
+                width: 290px;
+                height: 290px;
+            }
+
+            .profile-card {
+                inset: 27px;
+            }
+
+            .profile-badge {
+                right: -10px;
+                bottom: 25px;
+            }
+
+            .about-highlights {
+                grid-template-columns: 1fr;
+            }
+
+            .skills-header {
+                display: block;
+            }
+
+            .skills-tree {
+                grid-template-columns: 1fr;
+            }
+
+            .work-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .certificates-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .certificate-image {
+                height: 220px;
+            }
+
+            .work-preview {
+                height: 220px;
+            }
+
+            .contact-box {
+                padding: 30px 22px;
+            }
+
+            .contact-box h2 {
+                font-size: 38px;
+            }
+
+            .work-modal-body {
+                padding: 24px 20px;
+            }
+        }
+
+    </style>
+</head>
+
+<body>
+
+    <div class="background-orb orb-one"></div>
+    <div class="background-orb orb-two"></div>
+    <div class="background-orb orb-three"></div>
+
+    <div id="mouseGlow"></div>
+
+    <nav class="navbar">
+
+        <a href="#home" class="brand">
+            Shrouk<span>.</span>
+        </a>
+
+        <div class="nav-links">
+
+            <a href="#home" class="active">Home</a>
+            <a href="#about">About</a>
+            <a href="#skills">Skills</a>
+            <a href="#work">Work</a>
+            <a href="#certificates">Certificates</a>
+            <a href="#experience">Experience</a>
+            <a href="#contact">Contact</a>
+
+        </div>
+
+    </nav>
+
+    <main>
+
+        <section id="home" class="hero">
+
+            <div class="container">
+
+                <div class="hero-grid">
+
+                    <div class="hero-content reveal">
+
+                        <div class="hero-status">
+                            <i></i>
+                            Open to Cybersecurity Opportunities
+                        </div>
+
+                        <h1>
+                            Turning curiosity into
+                            <span class="highlight">cybersecurity.</span>
+                        </h1>
+
+                        <p class="hero-description">
+                            I'm Shrouk Ali, a 2026 Cyber Security graduate
+                            with hands-on exposure to SOC operations,
+                            security monitoring, network security,
+                            incident response, vulnerability assessment,
+                            and AI-driven security solutions.
+                        </p>
+
+                        <div class="hero-actions">
+
+                            <a
+                                href="./assets/CV/CV.png"
+                                class="btn btn-primary"
+                                target="_blank"
+                                rel="noopener noreferrer"
+                            >
+                                View My CV
+                                <span>↗</span>
+                            </a>
+
+                            <a
+                                href="#skills"
+                                class="btn btn-outline"
+                            >
+                                Explore My Skills
+                                <span>→</span>
+                            </a>
+
+                        </div>
+
+                        <div class="hero-links">
+
+                            <a
+                                href="https://github.com/shhroukalii"
+                                target="_blank"
+                                rel="noopener noreferrer"
+                            >
+                                GitHub ↗
+                            </a>
+
+                            <a
+                                href="https://www.linkedin.com/in/shrouk-ali-a73177352"
+                                target="_blank"
+                                rel="noopener noreferrer"
+                            >
+                                LinkedIn ↗
+                            </a>
+
+                            <a href="mailto:shroukk5877@gmail.com">
+                                Gmail ↗
+                            </a>
+
+                        </div>
+
+                    </div>
+
+                    <div class="hero-visual reveal">
+
+                        <div class="profile-wrap">
+
+                            <div class="profile-ring"></div>
+
+                            <div class="profile-card">
+
+                                <!-- FIXED IMAGE PATH -->
+                                <img
+                                    id="profileImage"
+                                    src="./shrouk 4532.JPG"
+                                    alt="Shrouk Ali"
+                                >
+
+                                <div
+                                    class="profile-fallback"
+                                    id="profileFallback"
+                                >
+                                    SA
+                                </div>
+
+                            </div>
+
+                            <div class="profile-badge">
+
+                                <strong>
+                                    Cybersecurity
+                                </strong>
+
+                                <span>
+                                    SOC • Network • Security
+                                </span>
+
+                            </div>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </section>
+
+        <section id="about">
+
+            <div class="container">
+
+                <div class="about-layout">
+
+                    <div class="reveal">
+
+                        <div class="section-label">
+                            About Me
+                        </div>
+
+                        <div class="about-intro">
+
+                            I'm Shrouk — a
+                            <span>
+                                Cyber Security graduate
+                            </span>
+                            who enjoys turning security knowledge
+                            into practical work.
+
+                        </div>
+
+                    </div>
+
+                    <div class="reveal">
+
+                        <p class="about-text">
+                            I graduated in 2026 from Delta University
+                            for Science and Technology, specializing in
+                            Artificial Intelligence with a focus on
+                            Cyber Security.
+                        </p>
+
+                        <p class="about-text">
+                            My main direction is cybersecurity and
+                            security operations, with practical exposure
+                            to SOC workflows, network security,
+                            vulnerability assessment, incident response,
+                            Linux, and security tools.
+                        </p>
+
+                        <p class="about-text">
+                            I also enjoy exploring how Artificial
+                            Intelligence can support security teams,
+                            especially in threat analysis and
+                            vulnerability detection.
+                        </p>
+
+                        <div class="about-highlights">
+
+                            <div class="about-highlight">
+                                <strong>2026</strong>
+                                <span>Cyber Security Graduate</span>
+                            </div>
+
+                            <div class="about-highlight">
+                                <strong>SOC</strong>
+                                <span>Security Operations Focus</span>
+                            </div>
+
+                            <div class="about-highlight">
+                                <strong>AI + Security</strong>
+                                <span>Intelligent Security Solutions</span>
+                            </div>
+
+                            <div class="about-highlight">
+                                <strong>Hands-on</strong>
+                                <span>Labs & Practical Training</span>
+                            </div>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </section>
+
+        <section id="skills">
+
+            <div class="container">
+
+                <div class="skills-header reveal">
+
+                    <div>
+
+                        <div class="section-label">
+                            What I Work With
+                        </div>
+
+                        <h2 class="section-title">
+                            Skills & Focus
+                        </h2>
+
+                    </div>
+
+                </div>
+
+                <div class="skills-tree">
+
+                    <div class="skill-card reveal" data-skill="soc">
+
+                        <span class="skill-number">01</span>
+
+                        <div class="skill-icon">◉</div>
+
+                        <h3>SOC Analysis</h3>
+
+                        <p>
+                            Monitoring, alert triage,
+                            investigation and defensive workflows.
+                        </p>
+
+                    </div>
+
+                    <div class="skill-card reveal" data-skill="network">
+
+                        <span class="skill-number">02</span>
+
+                        <div class="skill-icon">◇</div>
+
+                        <h3>Network Security</h3>
+
+                        <p>
+                            Networking fundamentals,
+                            traffic analysis and secure infrastructure.
+                        </p>
+
+                    </div>
+
+                    <div class="skill-card reveal" data-skill="vulnerability">
+
+                        <span class="skill-number">03</span>
+
+                        <div class="skill-icon">⚡</div>
+
+                        <h3>Vulnerability Assessment</h3>
+
+                        <p>
+                            Finding, understanding and documenting
+                            security weaknesses.
+                        </p>
+
+                    </div>
+
+                    <div class="skill-card reveal" data-skill="web">
+
+                        <span class="skill-number">04</span>
+
+                        <div class="skill-icon">&lt;/&gt;</div>
+
+                        <h3>Web Security</h3>
+
+                        <p>
+                            OWASP concepts, web testing
+                            and application security.
+                        </p>
+
+                    </div>
+
+                    <div class="skill-card reveal" data-skill="linux">
+
+                        <span class="skill-number">05</span>
+
+                        <div class="skill-icon">$</div>
+
+                        <h3>Linux</h3>
+
+                        <p>
+                            Linux fundamentals and
+                            security-focused environments.
+                        </p>
+
+                    </div>
+
+                    <div class="skill-card reveal" data-skill="tools">
+
+                        <span class="skill-number">06</span>
+
+                        <div class="skill-icon">+</div>
+
+                        <h3>Security Tools</h3>
+
+                        <p>
+                            Wireshark, Nmap, Burp Suite,
+                            Nessus, ZAP and Metasploit.
+                        </p>
+
+                    </div>
+
+                    <div class="skill-card reveal" data-skill="programming">
+
+                        <span class="skill-number">07</span>
+
+                        <div class="skill-icon">{}</div>
+
+                        <h3>Programming</h3>
+
+                        <p>
+                            Python, Java, C#, SQL and
+                            security-oriented development.
+                        </p>
+
+                    </div>
+
+                    <div class="skill-card reveal" data-skill="ai">
+
+                        <span class="skill-number">08</span>
+
+                        <div class="skill-icon">AI</div>
+
+                        <h3>AI Security</h3>
+
+                        <p>
+                            Applying AI concepts to vulnerability
+                            detection and security solutions.
+                        </p>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </section>
+
+        <section id="work">
+
+            <div class="container">
+
+                <div class="reveal">
+
+                    <div class="section-label">
+                        Practical Work
+                    </div>
+
+                    <h2 class="section-title">
+                        Things I've Built
+                    </h2>
+
+                    <p class="section-description">
+                        A selection of academic projects, security
+                        labs, and practical work that reflects how
+                        I apply what I learn.
+                    </p>
+
+                </div>
+
+                <div class="work-grid">
+
+                    <div class="work-card reveal" data-work="fortress">
+
+                        <div class="work-preview">
+
+                            <div class="work-number">01</div>
+
+                            <div class="work-icon">◈</div>
+
+                        </div>
+
+                        <div class="work-info">
+
+                            <span class="work-tag">
+                                Graduation Project
+                            </span>
+
+                            <h3>
+                                Cyber AI Fortress
+                            </h3>
+
+                            <span>
+                                AI • Cybersecurity • Code Analysis
+                            </span>
+
+                        </div>
+
+                    </div>
+
+                    <div class="work-card reveal" data-work="securecorp">
+
+                        <div class="work-preview">
+
+                            <div class="work-number">02</div>
+
+                            <div class="work-icon">◇</div>
+
+                        </div>
+
+                        <div class="work-info">
+
+                            <span class="work-tag">
+                                Network Lab
+                            </span>
+
+                            <h3>
+                                SecureCorp Network Lab
+                            </h3>
+
+                            <span>
+                                GNS3 • Networking • Security
+                            </span>
+
+                        </div>
+
+                    </div>
+
+                    <div class="work-card reveal" data-work="security-labs">
+
+                        <div class="work-preview">
+
+                            <div class="work-number">03</div>
+
+                            <div class="work-icon">⚡</div>
+
+                        </div>
+
+                        <div class="work-info">
+
+                            <span class="work-tag">
+                                Security Labs
+                            </span>
+
+                            <h3>
+                                Threat & Vulnerability Labs
+                            </h3>
+
+                            <span>
+                                Wireshark • Nmap • Nessus • ZAP
+                            </span>
+
+                        </div>
+
+                    </div>
+
+                    <div class="work-card reveal" data-work="calculator">
+
+                        <div class="work-preview">
+
+                            <div class="work-number">04</div>
+
+                            <div class="work-icon">&lt;/&gt;</div>
+
+                        </div>
+
+                        <div class="work-info">
+
+                            <span class="work-tag">
+                                Development
+                            </span>
+
+                            <h3>
+                                Building a Calculator
+                            </h3>
+
+                            <span>
+                                C# • Programming Fundamentals
+                            </span>
+
+                        </div>
+
+                    </div>
+
+                    <div class="work-card reveal" data-work="database">
+
+                        <div class="work-preview">
+
+                            <div class="work-number">05</div>
+
+                            <div class="work-icon">DB</div>
+
+                        </div>
+
+                        <div class="work-info">
+
+                            <span class="work-tag">
+                                Database Project
+                            </span>
+
+                            <h3>
+                                Building a Company's Database
+                                using MySQL and SQL
+                            </h3>
+
+                            <span>
+                                MySQL • SQL • Database Design
+                            </span>
+
+                        </div>
+
+                    </div>
+
+                    <div class="work-card reveal" data-work="soc">
+
+                        <div class="work-preview">
+
+                            <div class="work-number">06</div>
+
+                            <div class="work-icon">◉</div>
+
+                        </div>
+
+                        <div class="work-info">
+
+                            <span class="work-tag">
+                                SOC Training
+                            </span>
+
+                            <h3>
+                                SOC & Security Monitoring
+                            </h3>
+
+                            <span>
+                                SIEM • Alert Triage • IR
+                            </span>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </section>
+
+        <section id="certificates">
+
+            <div class="container">
+
+                <div class="reveal">
+
+                    <div class="section-label">
+                        Certificates
+                    </div>
+
+                    <h2 class="section-title">
+                        Learning that became practical skills.
+                    </h2>
+
+                </div>
+
+                <div class="certificates-grid">
+
+                    <div
+                        class="certificate-card reveal"
+                        data-image="./assets/certificates/pre%20security.png"
+                        data-title="Pre Security"
+                    >
+
+                        <img
+                            class="certificate-image"
+                            src="./assets/certificates/pre%20security.png"
+                            alt="Pre Security certificate"
+                        >
+
+                        <div class="certificate-info">
+
+                            <h3>Pre Security</h3>
+
+                            <span>TryHackMe</span>
+
+                        </div>
+
+                    </div>
+
+                    <div
+                        class="certificate-card reveal"
+                        data-image="./assets/certificates/intro%20to%20network%20security.png"
+                        data-title="Introduction to Network Security"
+                    >
+
+                        <img
+                            class="certificate-image"
+                            src="./assets/certificates/intro%20to%20network%20security.png"
+                            alt="Introduction to Network Security certificate"
+                        >
+
+                        <div class="certificate-info">
+
+                            <h3>
+                                Introduction to Network Security
+                            </h3>
+
+                            <span>
+                                Cybersecurity Training
+                            </span>
+
+                        </div>
+
+                    </div>
+
+                    <div
+                        class="certificate-card reveal"
+                        data-image="./assets/certificates/CN%20fundamentals.png"
+                        data-title="CN Fundamentals"
+                    >
+
+                        <img
+                            class="certificate-image"
+                            src="./assets/certificates/CN%20fundamentals.png"
+                            alt="CN Fundamentals certificate"
+                        >
+
+                        <div class="certificate-info">
+
+                            <h3>CN Fundamentals</h3>
+
+                            <span>Networking</span>
+
+                        </div>
+
+                    </div>
+
+                    <div
+                        class="certificate-card reveal"
+                        data-image="./assets/certificates/intro%20to%20database.png"
+                        data-title="Introduction to Database"
+                    >
+
+                        <img
+                            class="certificate-image"
+                            src="./assets/certificates/intro%20to%20database.png"
+                            alt="Introduction to Database certificate"
+                        >
+
+                        <div class="certificate-info">
+
+                            <h3>Introduction to Database</h3>
+
+                            <span>Database Fundamentals</span>
+
+                        </div>
+
+                    </div>
+
+                    <div
+                        class="certificate-card reveal"
+                        data-image="./assets/certificates/building%20a%20calaculator.png"
+                        data-title="Building a Calculator"
+                    >
+
+                        <img
+                            class="certificate-image"
+                            src="./assets/certificates/building%20a%20calaculator.png"
+                            alt="Building a Calculator certificate"
+                        >
+
+                        <div class="certificate-info">
+
+                            <h3>Building a Calculator</h3>
+
+                            <span>Programming</span>
+
+                        </div>
+
+                    </div>
+
+                    <div
+                        class="certificate-card reveal"
+                        data-image="./assets/certificates/Buliding%20a%20company.png"
+                        data-title="Building a Company"
+                    >
+
+                        <img
+                            class="certificate-image"
+                            src="./assets/certificates/Buliding%20a%20company.png"
+                            alt="Building a Company certificate"
+                        >
+
+                        <div class="certificate-info">
+
+                            <h3>Building a Company</h3>
+
+                            <span>Training</span>
+
+                        </div>
+
+                    </div>
+
+                    <div
+                        class="certificate-card reveal"
+                        data-image="./assets/certificates/intro%20to%20AI%20%26%20applications.jpeg"
+                        data-title="Intro to AI & Applications"
+                    >
+
+                        <img
+                            class="certificate-image"
+                            src="./assets/certificates/intro%20to%20AI%20%26%20applications.jpeg"
+                            alt="Intro to AI & Applications certificate"
+                        >
+
+                        <div class="certificate-info">
+
+                            <h3>
+                                Intro to AI & Applications
+                            </h3>
+
+                            <span>
+                                Artificial Intelligence
+                            </span>
+
+                        </div>
+
+                    </div>
+
+                    <div
+                        class="certificate-card reveal"
+                        data-image="./assets/certificates/intro%20to%20web%20development.png"
+                        data-title="Intro to Web Development"
+                    >
+
+                        <img
+                            class="certificate-image"
+                            src="./assets/certificates/intro%20to%20web%20development.png"
+                            alt="Intro to Web Development certificate"
+                        >
+
+                        <div class="certificate-info">
+
+                            <h3>
+                                Intro to Web Development
+                            </h3>
+
+                            <span>
+                                Web Development
+                            </span>
+
+                        </div>
+
+                    </div>
+
+                    <div
+                        class="certificate-card reveal"
+                        data-image="./assets/certificates/conversational%20english%20skills.png"
+                        data-title="Conversational English Skills"
+                    >
+
+                        <img
+                            class="certificate-image"
+                            src="./assets/certificates/conversational%20english%20skills.png"
+                            alt="Conversational English Skills certificate"
+                        >
+
+                        <div class="certificate-info">
+
+                            <h3>
+                                Conversational English Skills
+                            </h3>
+
+                            <span>
+                                English Communication
+                            </span>
+
+                        </div>
+
+                    </div>
+
+                    <div
+                        class="certificate-card reveal"
+                        data-image="./assets/certificates/java%20programming.png"
+                        data-title="Java Programming"
+                    >
+
+                        <img
+                            class="certificate-image"
+                            src="./assets/certificates/java%20programming.png"
+                            alt="Java Programming certificate"
+                        >
+
+                        <div class="certificate-info">
+
+                            <h3>Java Programming</h3>
+
+                            <span>Programming</span>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </section>
+
+        <section id="experience">
+
+            <div class="container">
+
+                <div class="reveal">
+
+                    <div class="section-label">
+                        Experience
+                    </div>
+
+                    <h2 class="section-title">
+                        My Journey
+                    </h2>
+
+                </div>
+
+                <div class="timeline">
+
+                    <div class="timeline-item reveal">
+
+                        <div class="timeline-date">
+                            JUL 2026 — PRESENT
+                        </div>
+
+                        <h3>
+                            Freelance Recruiter
+                        </h3>
+
+                        <h4>
+                            The Hires Lab Recruitment Agency
+                        </h4>
+
+                        <p>
+                            Freelance recruitment experience involving
+                            candidate sourcing, communication,
+                            coordination and professional client-facing
+                            work.
+                        </p>
+
+                    </div>
+
+                    <div class="timeline-item reveal">
+
+                        <div class="timeline-date">
+                            2026
+                        </div>
+
+                        <h3>
+                            SOC Trainee
+                        </h3>
+
+                        <h4>
+                            Digital Egypt Pioneers Initiative — DEPI
+                        </h4>
+
+                        <p>
+                            Security operations training covering
+                            SOC workflows, SIEM concepts, alert
+                            analysis, incident response, networking,
+                            Windows/Linux fundamentals and security
+                            monitoring.
+                        </p>
+
+                    </div>
+
+                    <div class="timeline-item reveal">
+
+                        <div class="timeline-date">
+                            2026
+                        </div>
+
+                        <h3>
+                            Security Analyst Training
+                        </h3>
+
+                        <h4>
+                            TryHackMe
+                        </h4>
+
+                        <p>
+                            Hands-on security learning covering
+                            SOC operations, SIEM alert triage,
+                            phishing analysis, Wireshark, EDR,
+                            SOAR and threat investigation.
+                        </p>
+
+                    </div>
+
+                    <div class="timeline-item reveal">
+
+                        <div class="timeline-date">
+                            2025 — 2026
+                        </div>
+
+                        <h3>
+                            Cyber AI Fortress
+                        </h3>
+
+                        <h4>
+                            Graduation Project — Cyber Security Department
+                        </h4>
+
+                        <p>
+                            Developed an intelligent cybersecurity
+                            and code analysis system focused on
+                            vulnerability detection and security
+                            assessment using AI and cybersecurity
+                            techniques.
+                        </p>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </section>
+
+        <section id="contact">
+
+            <div class="container">
+
+                <div class="contact-box reveal">
+
+                    <div class="section-label">
+                        Let's Connect
+                    </div>
+
+                    <h2>
+                        Interested in working together?
+                    </h2>
+
+                    <p>
+                        I'm open to cybersecurity opportunities,
+                        freelance work, collaborations, and projects
+                        where I can keep learning while creating
+                        meaningful security solutions.
+                    </p>
+
+                    <div class="contact-links">
+
+                        <a
+                            class="contact-link"
+                            href="https://github.com/shhroukalii"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                        >
+
+                            <svg
+                                class="contact-icon"
+                                viewBox="0 0 24 24"
+                                fill="currentColor"
+                            >
+
+                                <path d="M12 .5C5.65.5.5 5.65.5 12c0 5.08 3.29 9.39 7.85 10.91.57.1.78-.25.78-.55v-2.12c-3.2.69-3.87-1.54-3.87-1.54-.52-1.32-1.28-1.67-1.28-1.67-1.04-.71.08-.7.08-.7 1.15.08 1.75 1.18 1.75 1.18 1.02 1.75 2.67 1.25 3.32.96.1-.74.4-1.25.72-1.54-2.55-.29-5.23-1.27-5.23-5.66 0-1.25.45-2.27 1.18-3.07-.12-.29-.51-1.46.11-3.04 0 0 .96-.31 3.15 1.17a10.96 10.96 0 0 1 5.74 0c2.19-1.48 3.15-1.17 3.15-1.17.62 1.58.23 2.75.11 3.04.73.8 1.18 1.82 1.18 3.07 0 4.4-2.69 5.37-5.25 5.65.41.35.77 1.05.77 2.12v3.14c0 .3.21.66.79.55A10.99 10.99 0 0 0 23.5 12C23.5 5.65 18.35.5 12 .5Z"/>
+
+                            </svg>
+
+                            GitHub
+
+                        </a>
+
+                        <a
+                            class="contact-link"
+                            href="https://www.linkedin.com/in/shrouk-ali-a73177352"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                        >
+
+                            <svg
+                                class="contact-icon"
+                                viewBox="0 0 24 24"
+                                fill="currentColor"
+                            >
+
+                                <path d="M5.2 3.5A2.2 2.2 0 1 1 .8 3.5a2.2 2.2 0 0 1 4.4 0ZM1 8h4.2v13H1V8Zm6.8 0H12v1.8h.1c.58-1.1 2-2.25 4.1-2.25 4.38 0 5.2 2.88 5.2 6.62V21H17.2v-6.05c0-1.44-.03-3.3-2.02-3.3-2.02 0-2.33 1.58-2.33 3.2V21H7.8V8Z"/>
+
+                            </svg>
+
+                            LinkedIn
+
+                        </a>
+
+                        <a
+                            class="contact-link"
+                            href="mailto:shroukk5877@gmail.com"
+                        >
+
+                            <svg
+                                class="contact-icon"
+                                viewBox="0 0 24 24"
+                                fill="none"
+                                stroke="currentColor"
+                                stroke-width="1.8"
+                            >
+
+                                <rect
+                                    x="2.5"
+                                    y="4"
+                                    width="19"
+                                    height="16"
+                                    rx="3"
+                                />
+
+                                <path d="m4 7 8 6 8-6"/>
+
+                            </svg>
+
+                            Gmail
+
+                        </a>
+
+                        <a
+                            class="contact-link"
+                            href="./assets/CV/CV.png"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                        >
+                            View CV ↗
+                        </a>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </section>
+
+    </main>
+
+    <div
+        class="modal"
+        id="certificateModal"
+        aria-hidden="true"
+    >
+
+        <div class="modal-content">
+
+            <div class="modal-header">
+
+                <h3 id="certificateTitle">
+                    Certificate
+                </h3>
+
+                <button
+                    class="modal-close"
+                    type="button"
+                    id="certificateClose"
+                    aria-label="Close certificate"
+                >
+                    ×
+                </button>
+
+            </div>
+
+            <div class="modal-body">
+
+                <img
+                    id="certificateModalImage"
+                    src=""
+                    alt="Certificate"
+                >
+
+            </div>
+
+        </div>
+
+    </div>
+
+    <div
+        class="modal"
+        id="workModal"
+        aria-hidden="true"
+    >
+
+        <div class="modal-content work-modal-content">
+
+            <div class="modal-header">
+
+                <h3>
+                    Project Details
+                </h3>
+
+                <button
+                    class="modal-close"
+                    type="button"
+                    id="workClose"
+                    aria-label="Close project"
+                >
+                    ×
+                </button>
+
+            </div>
+
+            <div class="work-modal-body">
+
+                <span
+                    class="work-modal-label"
+                    id="workModalLabel"
+                >
+                    Project
+                </span>
+
+                <h3 id="workModalTitle">
+                    Project Title
+                </h3>
+
+                <p id="workModalDescription">
+                    Project description.
+                </p>
+
+                <div
+                    class="work-modal-list"
+                    id="workModalList"
+                ></div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+    <div
+        class="modal"
+        id="skillModal"
+        aria-hidden="true"
+    >
+
+        <div class="modal-content skill-modal-content">
+
+            <div class="modal-header">
+
+                <h3>
+                    Skill Focus
+                </h3>
+
+                <button
+                    class="modal-close"
+                    type="button"
+                    id="skillClose"
+                    aria-label="Close"
+                >
+                    ×
+                </button>
+
+            </div>
+
+            <div class="skill-modal-body">
+
+                <h3 id="skillModalTitle">
+                    Skill
+                </h3>
+
+                <p id="skillModalDescription">
+                    Skill description.
+                </p>
+
+                <div
+                    class="modal-tags"
+                    id="skillModalTags"
+                ></div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+    <script>
+
+        const mouseGlow =
+            document.getElementById("mouseGlow");
+
+        window.addEventListener(
+            "mousemove",
+            function (event) {
+
+                mouseGlow.style.left =
+                    event.clientX + "px";
+
+                mouseGlow.style.top =
+                    event.clientY + "px";
+
+            }
+        );
+
+        const revealElements =
+            document.querySelectorAll(".reveal");
+
+        const revealObserver =
+            new IntersectionObserver(
+                function (entries) {
+
+                    entries.forEach(
+                        function (entry) {
+
+                            if (
+                                entry.isIntersecting
+                            ) {
+
+                                entry.target.classList.add(
+                                    "visible"
+                                );
+
+                                revealObserver.unobserve(
+                                    entry.target
+                                );
+
+                            }
+
+                        }
+                    );
+
+                },
+                {
+                    threshold: 0.12
+                }
+            );
+
+        revealElements.forEach(
+            function (element) {
+
+                revealObserver.observe(
+                    element
+                );
+
+            }
+        );
+
+        const profileImage =
+            document.getElementById(
+                "profileImage"
+            );
+
+        const profileFallback =
+            document.getElementById(
+                "profileFallback"
+            );
+
+        profileImage.addEventListener(
+            "error",
+            function () {
+
+                profileImage.style.display =
+                    "none";
+
+                profileFallback.style.display =
+                    "flex";
+
+            }
+        );
+
+        const certificateModal =
+            document.getElementById(
+                "certificateModal"
+            );
+
+        const certificateModalImage =
+            document.getElementById(
+                "certificateModalImage"
+            );
+
+        const certificateTitle =
+            document.getElementById(
+                "certificateTitle"
+            );
+
+        const certificateClose =
+            document.getElementById(
+                "certificateClose"
+            );
+
+        const certificateCards =
+            document.querySelectorAll(
+                ".certificate-card"
+            );
+
+        certificateCards.forEach(
+            function (card) {
+
+                const image =
+                    card.querySelector(
+                        ".certificate-image"
+                    );
+
+                image.addEventListener(
+                    "error",
+                    function () {
+
+                        image.style.display =
+                            "none";
+
+                        const placeholder =
+                            document.createElement(
+                                "div"
+                            );
+
+                        placeholder.style.height =
+                            "190px";
+
+                        placeholder.style.display =
+                            "flex";
+
+                        placeholder.style.alignItems =
+                            "center";
+
+                        placeholder.style.justifyContent =
+                            "center";
+
+                        placeholder.style.color =
+                            "#ff76bd";
+
+                        placeholder.style.fontSize =
+                            "12px";
+
+                        placeholder.innerText =
+                            "Certificate image not found";
+
+                        image.parentNode.insertBefore(
+                            placeholder,
+                            image
+                        );
+
+                    }
+                );
+
+                card.addEventListener(
+                    "click",
+                    function () {
+
+                        const imagePath =
+                            card.dataset.image;
+
+                        const title =
+                            card.dataset.title;
+
+                        certificateTitle.textContent =
+                            title;
+
+                        certificateModalImage.src =
+                            imagePath;
+
+                        certificateModalImage.alt =
+                            title;
+
+                        certificateModal.classList.add(
+                            "show"
+                        );
+
+                        certificateModal.setAttribute(
+                            "aria-hidden",
+                            "false"
+                        );
+
+                        document.body.style.overflow =
+                            "hidden";
+
+                    }
+                );
+
+            }
+        );
+
+        function closeCertificateModal() {
+
+            certificateModal.classList.remove(
+                "show"
+            );
+
+            certificateModal.setAttribute(
+                "aria-hidden",
+                "true"
+            );
+
+            certificateModalImage.src = "";
+
+            document.body.style.overflow = "";
+
+        }
+
+        certificateClose.addEventListener(
+            "click",
+            closeCertificateModal
+        );
+
+        certificateModal.addEventListener(
+            "click",
+            function (event) {
+
+                if (
+                    event.target ===
+                    certificateModal
+                ) {
+
+                    closeCertificateModal();
+
+                }
+
+            }
+        );
+
+        const workModal =
+            document.getElementById(
+                "workModal"
+            );
+
+        const workClose =
+            document.getElementById(
+                "workClose"
+            );
+
+        const workModalLabel =
+            document.getElementById(
+                "workModalLabel"
+            );
+
+        const workModalTitle =
+            document.getElementById(
+                "workModalTitle"
+            );
+
+        const workModalDescription =
+            document.getElementById(
+                "workModalDescription"
+            );
+
+        const workModalList =
+            document.getElementById(
+                "workModalList"
+            );
+
+        const workData = {
+
+            fortress: {
+
+                label:
+                    "Graduation Project",
+
+                title:
+                    "Cyber AI Fortress",
+
+                description:
+                    "An intelligent cybersecurity and code analysis system designed to help identify vulnerabilities in source code and support security assessment through a combination of Artificial Intelligence and cybersecurity techniques.",
+
+                items: [
+                    "Analyzed source code to identify potential security vulnerabilities.",
+                    "Combined AI-based code analysis with static security metrics.",
+                    "Used SAFE / VULNERABLE classification with confidence information and CWE references.",
+                    "Integrated security scanning concepts including OWASP ZAP for live security assessment.",
+                    "Built the project around modern web architecture with a dashboard and security-focused workflow."
+                ]
+
+            },
+
+            securecorp: {
+
+                label:
+                    "Network Lab",
+
+                title:
+                    "SecureCorp Network Lab",
+
+                description:
+                    "An enterprise-style network lab built in GNS3 to practice network design, segmentation, routing and infrastructure security in a realistic environment.",
+
+                items: [
+                    "Designed an HQ and branch network environment.",
+                    "Implemented VLANs for management, users, voice, servers and guest networks.",
+                    "Applied VLSM for structured IP addressing.",
+                    "Configured routing concepts including OSPF.",
+                    "Worked with HSRP and network segmentation.",
+                    "Analyzed connectivity and troubleshooting scenarios in GNS3."
+                ]
+
+            },
+
+            "security-labs": {
+
+                label:
+                    "Security Labs",
+
+                title:
+                    "Threat & Vulnerability Labs",
+
+                description:
+                    "A collection of hands-on cybersecurity labs focused on network traffic analysis, vulnerability assessment, web security testing and threat investigation.",
+
+                items: [
+                    "Analyzed network traffic using Wireshark.",
+                    "Performed reconnaissance and scanning with Nmap.",
+                    "Worked with vulnerability assessment using Nessus.",
+                    "Practiced web security testing using Burp Suite and OWASP ZAP.",
+                    "Worked through phishing and email-analysis scenarios.",
+                    "Applied security monitoring and investigation workflows."
+                ]
+
+            },
+
+            calculator: {
+
+                label:
+                    "Development",
+
+                title:
+                    "Building a Calculator",
+
+                description:
+                    "A C# programming project created to practice application logic, user interaction, calculations and fundamental programming concepts.",
+
+                items: [
+                    "Implemented arithmetic operations.",
+                    "Handled user input and application flow.",
+                    "Applied variables, conditions and programming logic.",
+                    "Practiced C# fundamentals through a practical application."
+                ]
+
+            },
+
+            database: {
+
+                label:
+                    "Database Project",
+
+                title:
+                    "Building a Company's Database using MySQL and SQL",
+
+                description:
+                    "A database project focused on designing and working with a company's data using MySQL and SQL, including structured data storage and querying.",
+
+                items: [
+                    "Designed a structured relational database for a company.",
+                    "Created tables and organized business-related data.",
+                    "Defined relationships between database entities.",
+                    "Used SQL queries to retrieve and manage information.",
+                    "Practiced database organization and relational database concepts."
+                ]
+
+            },
+
+            soc: {
+
+                label:
+                    "SOC Training",
+
+                title:
+                    "SOC & Security Monitoring",
+
+                description:
+                    "Practical security operations training focused on monitoring, alert triage, SIEM concepts, phishing analysis and incident response workflows.",
+
+                items: [
+                    "Practiced SOC alert triage and investigation workflows.",
+                    "Worked with SIEM concepts and security logs.",
+                    "Analyzed phishing and suspicious email scenarios.",
+                    "Studied incident response processes.",
+                    "Explored SOAR and security automation concepts.",
+                    "Applied security analysis through hands-on labs."
+                ]
+
+            }
+
+        };
+
+        document
+            .querySelectorAll(".work-card")
+            .forEach(
+                function (card) {
+
+                    card.addEventListener(
+                        "click",
+                        function () {
+
+                            const key =
+                                card.dataset.work;
+
+                            const data =
+                                workData[key];
+
+                            if (!data) {
+                                return;
+                            }
+
+                            workModalLabel.textContent =
+                                data.label;
+
+                            workModalTitle.textContent =
+                                data.title;
+
+                            workModalDescription.textContent =
+                                data.description;
+
+                            workModalList.innerHTML =
+                                "";
+
+                            data.items.forEach(
+                                function (item) {
+
+                                    const div =
+                                        document.createElement(
+                                            "div"
+                                        );
+
+                                    div.textContent =
+                                        item;
+
+                                    workModalList.appendChild(
+                                        div
+                                    );
+
+                                }
+                            );
+
+                            workModal.classList.add(
+                                "show"
+                            );
+
+                            workModal.setAttribute(
+                                "aria-hidden",
+                                "false"
+                            );
+
+                            document.body.style.overflow =
+                                "hidden";
+
+                        }
+                    );
+
+                }
+            );
+
+        function closeWorkModal() {
+
+            workModal.classList.remove(
+                "show"
+            );
+
+            workModal.setAttribute(
+                "aria-hidden",
+                "true"
+            );
+
+            document.body.style.overflow =
+                "";
+
+        }
+
+        workClose.addEventListener(
+            "click",
+            closeWorkModal
+        );
+
+        workModal.addEventListener(
+            "click",
+            function (event) {
+
+                if (
+                    event.target ===
+                    workModal
+                ) {
+
+                    closeWorkModal();
+
+                }
+
+            }
+        );
+
+        const skillModal =
+            document.getElementById(
+                "skillModal"
+            );
+
+        const skillClose =
+            document.getElementById(
+                "skillClose"
+            );
+
+        const skillModalTitle =
+            document.getElementById(
+                "skillModalTitle"
+            );
+
+        const skillModalDescription =
+            document.getElementById(
+                "skillModalDescription"
+            );
+
+        const skillModalTags =
+            document.getElementById(
+                "skillModalTags"
+            );
+
+        const skillData = {
+
+            soc: {
+
+                title:
+                    "SOC Analysis",
+
+                description:
+                    "Practical exposure to SOC workflows, alert triage, security monitoring, SIEM concepts, investigation and incident response processes.",
+
+                tags: [
+                    "SIEM",
+                    "Alert Triage",
+                    "Incident Response",
+                    "Threat Analysis",
+                    "SOC Workflows"
+                ]
+
+            },
+
+            network: {
+
+                title:
+                    "Network Security",
+
+                description:
+                    "Understanding of networking fundamentals and secure infrastructure through practical labs and enterprise-style network environments.",
+
+                tags: [
+                    "TCP/IP",
+                    "VLANs",
+                    "VLSM",
+                    "OSPF",
+                    "HSRP",
+                    "Wireshark"
+                ]
+
+            },
+
+            vulnerability: {
+
+                title:
+                    "Vulnerability Assessment",
+
+                description:
+                    "Experience identifying and analyzing security weaknesses using vulnerability scanning and security assessment tools.",
+
+                tags: [
+                    "Nessus",
+                    "Nmap",
+                    "Vulnerability Analysis",
+                    "Risk Identification"
+                ]
+
+            },
+
+            web: {
+
+                title:
+                    "Web Security",
+
+                description:
+                    "Knowledge of web security concepts and practical exposure to application security testing and OWASP-based techniques.",
+
+                tags: [
+                    "OWASP",
+                    "Burp Suite",
+                    "OWASP ZAP",
+                    "Web Testing"
+                ]
+
+            },
+
+            linux: {
+
+                title:
+                    "Linux",
+
+                description:
+                    "Working knowledge of Linux environments used for cybersecurity labs, security testing and investigation.",
+
+                tags: [
+                    "Linux",
+                    "Kali Linux",
+                    "CLI",
+                    "Security Labs"
+                ]
+
+            },
+
+            tools: {
+
+                title:
+                    "Security Tools",
+
+                description:
+                    "Hands-on exposure to a range of cybersecurity tools used for network analysis, vulnerability assessment and security testing.",
+
+                tags: [
+                    "Wireshark",
+                    "Nmap",
+                    "Nessus",
+                    "Burp Suite",
+                    "OWASP ZAP",
+                    "Metasploit"
+                ]
+
+            },
+
+            programming: {
+
+                title:
+                    "Programming",
+
+                description:
+                    "Programming experience across Python, Java, C#, SQL and web technologies, with a focus on practical problem solving.",
+
+                tags: [
+                    "Python",
+                    "Java",
+                    "C#",
+                    "SQL",
+                    "Programming"
+                ]
+
+            },
+
+            ai: {
+
+                title:
+                    "AI Security",
+
+                description:
+                    "Exploring the use of Artificial Intelligence in cybersecurity, particularly vulnerability detection and intelligent security analysis.",
+
+                tags: [
+                    "AI",
+                    "Code Analysis",
+                    "CodeBERT",
+                    "Vulnerability Detection",
+                    "Cybersecurity"
+                ]
+
+            }
+
+        };
+
+        document
+            .querySelectorAll(".skill-card")
+            .forEach(
+                function (card) {
+
+                    card.addEventListener(
+                        "click",
+                        function () {
+
+                            const key =
+                                card.dataset.skill;
+
+                            const data =
+                                skillData[key];
+
+                            if (!data) {
+                                return;
+                            }
+
+                            skillModalTitle.textContent =
+                                data.title;
+
+                            skillModalDescription.textContent =
+                                data.description;
+
+                            skillModalTags.innerHTML =
+                                "";
+
+                            data.tags.forEach(
+                                function (tag) {
+
+                                    const span =
+                                        document.createElement(
+                                            "span"
+                                        );
+
+                                    span.className =
+                                        "modal-tag";
+
+                                    span.textContent =
+                                        tag;
+
+                                    skillModalTags.appendChild(
+                                        span
+                                    );
+
+                                }
+                            );
+
+                            skillModal.classList.add(
+                                "show"
+                            );
+
+                            skillModal.setAttribute(
+                                "aria-hidden",
+                                "false"
+                            );
+
+                            document.body.style.overflow =
+                                "hidden";
+
+                        }
+                    );
+
+                }
+            );
+
+        function closeSkillModal() {
+
+            skillModal.classList.remove(
+                "show"
+            );
+
+            skillModal.setAttribute(
+                "aria-hidden",
+                "true"
+            );
+
+            document.body.style.overflow =
+                "";
+
+        }
+
+        skillClose.addEventListener(
+            "click",
+            closeSkillModal
+        );
+
+        skillModal.addEventListener(
+            "click",
+            function (event) {
+
+                if (
+                    event.target ===
+                    skillModal
+                ) {
+
+                    closeSkillModal();
+
+                }
+
+            }
+        );
+
+        document.addEventListener(
+            "keydown",
+            function (event) {
+
+                if (
+                    event.key !== "Escape"
+                ) {
+                    return;
+                }
+
+                closeCertificateModal();
+                closeWorkModal();
+                closeSkillModal();
+
+            }
+        );
+
+        const sections =
+            document.querySelectorAll(
+                "main section"
+            );
+
+        const navItems =
+            document.querySelectorAll(
+                ".nav-links a"
+            );
+
+        window.addEventListener(
+            "scroll",
+            function () {
+
+                let current =
+                    "home";
+
+                sections.forEach(
+                    function (section) {
+
+                        const top =
+                            section.offsetTop - 150;
+
+                        if (
+                            window.scrollY >=
+                            top
+                        ) {
+
+                            current =
+                                section.id;
+
+                        }
+
+                    }
+                );
+
+                navItems.forEach(
+                    function (link) {
+
+                        link.classList.remove(
+                            "active"
+                        );
+
+                        if (
+                            link.getAttribute(
+                                "href"
+                            ) ===
+                            "#" + current
+                        ) {
+
+                            link.classList.add(
+                                "active"
+                            );
+
+                        }
+
+                    }
+                );
+
+            }
+        );
+
+    </script>
+
+</body>
+
+</html>
