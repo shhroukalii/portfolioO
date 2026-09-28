@@ -936,6 +936,34 @@
                 rgba(255, 63, 159, 0.13);
         }
 
+        /* PROJECT IMAGES */
+
+        .work-project-image {
+            width: 100%;
+            height: 100%;
+
+            display: block;
+
+            object-fit: cover;
+
+            position: absolute;
+            inset: 0;
+
+            z-index: 1;
+
+            transition:
+                transform 0.45s ease,
+                filter 0.45s ease;
+        }
+
+        .work-card:hover .work-project-image {
+            transform: scale(1.04);
+
+            filter:
+                saturate(1.08)
+                contrast(1.03);
+        }
+
         .work-preview::before {
             content: "";
 
@@ -959,6 +987,10 @@
                 12s
                 linear
                 infinite;
+
+            z-index: 2;
+
+            pointer-events: none;
         }
 
         .work-preview::after {
@@ -974,6 +1006,10 @@
             border:
                 1px solid
                 rgba(255, 118, 189, 0.28);
+
+            z-index: 2;
+
+            pointer-events: none;
         }
 
         @keyframes workRotate {
@@ -981,25 +1017,6 @@
             to {
                 transform: rotate(360deg);
             }
-        }
-
-        .work-number {
-            position: relative;
-
-            z-index: 2;
-
-            font-family:
-                "Space Grotesk",
-                sans-serif;
-
-            font-size: 45px;
-            font-weight: 700;
-
-            color: rgba(255, 118, 189, 0.8);
-
-            text-shadow:
-                0 0 25px
-                rgba(255, 63, 159, 0.35);
         }
 
         .work-icon {
@@ -1021,13 +1038,15 @@
             color: var(--pink-light);
 
             background:
-                rgba(10, 5, 10, 0.65);
+                rgba(10, 5, 10, 0.75);
 
             border:
                 1px solid
                 rgba(255, 63, 159, 0.18);
 
             font-size: 14px;
+
+            z-index: 4;
         }
 
         .work-info {
@@ -1815,7 +1834,6 @@
 
                             <div class="profile-card">
 
-                                <!-- FIXED IMAGE PATH -->
                                 <img
                                     id="profileImage"
                                     src="./shrouk 4532.JPG"
@@ -2082,6 +2100,8 @@
 
         </section>
 
+        <!-- ================= WORK ================= -->
+
         <section id="work">
 
             <div class="container">
@@ -2106,13 +2126,24 @@
 
                 <div class="work-grid">
 
-                    <div class="work-card reveal" data-work="fortress">
+                    <!-- 01 - CYBER AI FORTRESS -->
+
+                    <div
+                        class="work-card reveal"
+                        data-work="fortress"
+                    >
 
                         <div class="work-preview">
 
-                            <div class="work-number">01</div>
+                            <img
+                                class="work-project-image"
+                                src="./assets/projects/cyber%20AI%20fortress.png"
+                                alt="Cyber AI Fortress project"
+                            >
 
-                            <div class="work-icon">◈</div>
+                            <div class="work-icon">
+                                ◈
+                            </div>
 
                         </div>
 
@@ -2134,13 +2165,25 @@
 
                     </div>
 
-                    <div class="work-card reveal" data-work="securecorp">
+
+                    <!-- 02 - SECURECORP -->
+
+                    <div
+                        class="work-card reveal"
+                        data-work="securecorp"
+                    >
 
                         <div class="work-preview">
 
-                            <div class="work-number">02</div>
+                            <img
+                                class="work-project-image"
+                                src="./assets/projects/securecorp.png"
+                                alt="SecureCorp Network Lab project"
+                            >
 
-                            <div class="work-icon">◇</div>
+                            <div class="work-icon">
+                                ◇
+                            </div>
 
                         </div>
 
@@ -2162,13 +2205,25 @@
 
                     </div>
 
-                    <div class="work-card reveal" data-work="security-labs">
+
+                    <!-- 03 - THREAT & VULNERABILITY -->
+
+                    <div
+                        class="work-card reveal"
+                        data-work="security-labs"
+                    >
 
                         <div class="work-preview">
 
-                            <div class="work-number">03</div>
+                            <img
+                                class="work-project-image"
+                                src="./assets/projects/threat-vulnerability.png"
+                                alt="Threat and Vulnerability Labs project"
+                            >
 
-                            <div class="work-icon">⚡</div>
+                            <div class="work-icon">
+                                ⚡
+                            </div>
 
                         </div>
 
@@ -2190,13 +2245,25 @@
 
                     </div>
 
-                    <div class="work-card reveal" data-work="calculator">
+
+                    <!-- 04 - CALCULATOR -->
+
+                    <div
+                        class="work-card reveal"
+                        data-work="calculator"
+                    >
 
                         <div class="work-preview">
 
-                            <div class="work-number">04</div>
+                            <img
+                                class="work-project-image"
+                                src="./assets/projects/calculator.png"
+                                alt="Building a Calculator project"
+                            >
 
-                            <div class="work-icon">&lt;/&gt;</div>
+                            <div class="work-icon">
+                                &lt;/&gt;
+                            </div>
 
                         </div>
 
@@ -2218,13 +2285,25 @@
 
                     </div>
 
-                    <div class="work-card reveal" data-work="database">
+
+                    <!-- 05 - DATABASE -->
+
+                    <div
+                        class="work-card reveal"
+                        data-work="database"
+                    >
 
                         <div class="work-preview">
 
-                            <div class="work-number">05</div>
+                            <img
+                                class="work-project-image"
+                                src="./assets/projects/database.png"
+                                alt="Building a Company's Database using MySQL and SQL"
+                            >
 
-                            <div class="work-icon">DB</div>
+                            <div class="work-icon">
+                                DB
+                            </div>
 
                         </div>
 
@@ -2247,13 +2326,25 @@
 
                     </div>
 
-                    <div class="work-card reveal" data-work="soc">
+
+                    <!-- 06 - SOC -->
+
+                    <div
+                        class="work-card reveal"
+                        data-work="soc"
+                    >
 
                         <div class="work-preview">
 
-                            <div class="work-number">06</div>
+                            <img
+                                class="work-project-image"
+                                src="./assets/projects/soc-monitoring.png"
+                                alt="SOC and Security Monitoring project"
+                            >
 
-                            <div class="work-icon">◉</div>
+                            <div class="work-icon">
+                                ◉
+                            </div>
 
                         </div>
 
@@ -2772,6 +2863,8 @@
 
     </main>
 
+    <!-- CERTIFICATE MODAL -->
+
     <div
         class="modal"
         id="certificateModal"
@@ -2810,6 +2903,8 @@
         </div>
 
     </div>
+
+    <!-- WORK MODAL -->
 
     <div
         class="modal"
@@ -2863,6 +2958,8 @@
         </div>
 
     </div>
+
+    <!-- SKILL MODAL -->
 
     <div
         class="modal"
