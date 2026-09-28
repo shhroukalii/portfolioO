@@ -722,6 +722,10 @@
             margin-bottom: 20px;
         }
 
+        .about-text span {
+            color: var(--pink-light);
+        }
+
         .about-highlights {
             display: grid;
             grid-template-columns: repeat(2, 1fr);
@@ -936,18 +940,16 @@
                 rgba(255, 63, 159, 0.13);
         }
 
-        /* PROJECT IMAGES */
-
         .work-project-image {
+            position: absolute;
+            inset: 0;
+
             width: 100%;
             height: 100%;
 
             display: block;
 
             object-fit: cover;
-
-            position: absolute;
-            inset: 0;
 
             z-index: 1;
 
@@ -1752,6 +1754,8 @@
 
     <main>
 
+        <!-- ================= HOME ================= -->
+
         <section id="home" class="hero">
 
             <div class="container">
@@ -1871,6 +1875,9 @@
 
         </section>
 
+
+        <!-- ================= ABOUT ================= -->
+
         <section id="about">
 
             <div class="container">
@@ -1889,8 +1896,8 @@
                             <span>
                                 Cyber Security graduate
                             </span>
-                            who enjoys turning security knowledge
-                            into practical work.
+                            who turns technical skills
+                            into practical digital solutions.
 
                         </div>
 
@@ -1906,40 +1913,43 @@
                         </p>
 
                         <p class="about-text">
-                            My main direction is cybersecurity and
-                            security operations, with practical exposure
-                            to SOC workflows, network security,
-                            vulnerability assessment, incident response,
-                            Linux, and security tools.
+                            I work on
+                            <span>
+                                cybersecurity, websites, portfolios,
+                                databases, and technical projects
+                            </span>
+                            with a focus on clean, practical results.
                         </p>
 
                         <p class="about-text">
-                            I also enjoy exploring how Artificial
-                            Intelligence can support security teams,
-                            especially in threat analysis and
-                            vulnerability detection.
+                            I can help clients turn their ideas into
+                            <span>
+                                modern websites, technical solutions,
+                                security-focused projects, and organized
+                                digital work.
+                            </span>
                         </p>
 
                         <div class="about-highlights">
 
                             <div class="about-highlight">
-                                <strong>2026</strong>
-                                <span>Cyber Security Graduate</span>
+                                <strong>Cybersecurity</strong>
+                                <span>SOC • Security • Networking</span>
                             </div>
 
                             <div class="about-highlight">
-                                <strong>SOC</strong>
-                                <span>Security Operations Focus</span>
+                                <strong>Websites</strong>
+                                <span>Modern & Responsive Designs</span>
                             </div>
 
                             <div class="about-highlight">
-                                <strong>AI + Security</strong>
-                                <span>Intelligent Security Solutions</span>
+                                <strong>Technical Work</strong>
+                                <span>Databases • Programming • Projects</span>
                             </div>
 
                             <div class="about-highlight">
-                                <strong>Hands-on</strong>
-                                <span>Labs & Practical Training</span>
+                                <strong>Client Focused</strong>
+                                <span>Clean & Practical Results</span>
                             </div>
 
                         </div>
@@ -1951,6 +1961,9 @@
             </div>
 
         </section>
+
+
+        <!-- ================= SKILLS ================= -->
 
         <section id="skills">
 
@@ -2100,6 +2113,7 @@
 
         </section>
 
+
         <!-- ================= WORK ================= -->
 
         <section id="work">
@@ -2126,127 +2140,8 @@
 
                 <div class="work-grid">
 
-                    <!-- 01 - CYBER AI FORTRESS -->
 
-                    <div
-                        class="work-card reveal"
-                        data-work="fortress"
-                    >
-
-                        <div class="work-preview">
-
-                            <img
-                                class="work-project-image"
-                                src="./assets/projects/cyber%20AI%20fortress.png"
-                                alt="Cyber AI Fortress project"
-                            >
-
-                            <div class="work-icon">
-                                ◈
-                            </div>
-
-                        </div>
-
-                        <div class="work-info">
-
-                            <span class="work-tag">
-                                Graduation Project
-                            </span>
-
-                            <h3>
-                                Cyber AI Fortress
-                            </h3>
-
-                            <span>
-                                AI • Cybersecurity • Code Analysis
-                            </span>
-
-                        </div>
-
-                    </div>
-
-
-                    <!-- 02 - SECURECORP -->
-
-                    <div
-                        class="work-card reveal"
-                        data-work="securecorp"
-                    >
-
-                        <div class="work-preview">
-
-                            <img
-                                class="work-project-image"
-                                src="./assets/projects/securecorp.png"
-                                alt="SecureCorp Network Lab project"
-                            >
-
-                            <div class="work-icon">
-                                ◇
-                            </div>
-
-                        </div>
-
-                        <div class="work-info">
-
-                            <span class="work-tag">
-                                Network Lab
-                            </span>
-
-                            <h3>
-                                SecureCorp Network Lab
-                            </h3>
-
-                            <span>
-                                GNS3 • Networking • Security
-                            </span>
-
-                        </div>
-
-                    </div>
-
-
-                    <!-- 03 - THREAT & VULNERABILITY -->
-
-                    <div
-                        class="work-card reveal"
-                        data-work="security-labs"
-                    >
-
-                        <div class="work-preview">
-
-                            <img
-                                class="work-project-image"
-                                src="./assets/projects/threat-vulnerability.png"
-                                alt="Threat and Vulnerability Labs project"
-                            >
-
-                            <div class="work-icon">
-                                ⚡
-                            </div>
-
-                        </div>
-
-                        <div class="work-info">
-
-                            <span class="work-tag">
-                                Security Labs
-                            </span>
-
-                            <h3>
-                                Threat & Vulnerability Labs
-                            </h3>
-
-                            <span>
-                                Wireshark • Nmap • Nessus • ZAP
-                            </span>
-
-                        </div>
-
-                    </div>
-
-
-                    <!-- 04 - CALCULATOR -->
+                    <!-- 01 - CALCULATOR -->
 
                     <div
                         class="work-card reveal"
@@ -2286,7 +2181,7 @@
                     </div>
 
 
-                    <!-- 05 - DATABASE -->
+                    <!-- 02 - DATABASE -->
 
                     <div
                         class="work-card reveal"
@@ -2327,7 +2222,87 @@
                     </div>
 
 
-                    <!-- 06 - SOC -->
+                    <!-- 03 - CYBER AI FORTRESS -->
+
+                    <div
+                        class="work-card reveal"
+                        data-work="fortress"
+                    >
+
+                        <div class="work-preview">
+
+                            <img
+                                class="work-project-image"
+                                src="./assets/projects/cyber%20AI%20fortress.png"
+                                alt="Cyber AI Fortress project"
+                            >
+
+                            <div class="work-icon">
+                                ◈
+                            </div>
+
+                        </div>
+
+                        <div class="work-info">
+
+                            <span class="work-tag">
+                                Graduation Project
+                            </span>
+
+                            <h3>
+                                Cyber AI Fortress
+                            </h3>
+
+                            <span>
+                                AI • Cybersecurity • Code Analysis
+                            </span>
+
+                        </div>
+
+                    </div>
+
+
+                    <!-- 04 - SECURECORP -->
+
+                    <div
+                        class="work-card reveal"
+                        data-work="securecorp"
+                    >
+
+                        <div class="work-preview">
+
+                            <img
+                                class="work-project-image"
+                                src="./assets/projects/securecorp.png"
+                                alt="SecureCorp Network Lab project"
+                            >
+
+                            <div class="work-icon">
+                                ◇
+                            </div>
+
+                        </div>
+
+                        <div class="work-info">
+
+                            <span class="work-tag">
+                                Network Lab
+                            </span>
+
+                            <h3>
+                                SecureCorp Network Lab
+                            </h3>
+
+                            <span>
+                                GNS3 • Networking • Security
+                            </span>
+
+                        </div>
+
+                    </div>
+
+
+                    <!-- 05 - SOC -->
 
                     <div
                         class="work-card reveal"
@@ -2366,11 +2341,54 @@
 
                     </div>
 
+
+                    <!-- 06 - THREAT & VULNERABILITY -->
+
+                    <div
+                        class="work-card reveal"
+                        data-work="security-labs"
+                    >
+
+                        <div class="work-preview">
+
+                            <img
+                                class="work-project-image"
+                                src="./assets/projects/threat-vulnerability.png"
+                                alt="Threat and Vulnerability Labs project"
+                            >
+
+                            <div class="work-icon">
+                                ⚡
+                            </div>
+
+                        </div>
+
+                        <div class="work-info">
+
+                            <span class="work-tag">
+                                Security Labs
+                            </span>
+
+                            <h3>
+                                Threat & Vulnerability Labs
+                            </h3>
+
+                            <span>
+                                Wireshark • Nmap • Nessus • ZAP
+                            </span>
+
+                        </div>
+
+                    </div>
+
                 </div>
 
             </div>
 
         </section>
+
+
+        <!-- ================= CERTIFICATES ================= -->
 
         <section id="certificates">
 
@@ -2412,6 +2430,7 @@
 
                     </div>
 
+
                     <div
                         class="certificate-card reveal"
                         data-image="./assets/certificates/intro%20to%20network%20security.png"
@@ -2438,6 +2457,7 @@
 
                     </div>
 
+
                     <div
                         class="certificate-card reveal"
                         data-image="./assets/certificates/CN%20fundamentals.png"
@@ -2459,6 +2479,7 @@
                         </div>
 
                     </div>
+
 
                     <div
                         class="certificate-card reveal"
@@ -2482,6 +2503,7 @@
 
                     </div>
 
+
                     <div
                         class="certificate-card reveal"
                         data-image="./assets/certificates/building%20a%20calaculator.png"
@@ -2504,6 +2526,7 @@
 
                     </div>
 
+
                     <div
                         class="certificate-card reveal"
                         data-image="./assets/certificates/Buliding%20a%20company.png"
@@ -2525,6 +2548,7 @@
                         </div>
 
                     </div>
+
 
                     <div
                         class="certificate-card reveal"
@@ -2552,6 +2576,7 @@
 
                     </div>
 
+
                     <div
                         class="certificate-card reveal"
                         data-image="./assets/certificates/intro%20to%20web%20development.png"
@@ -2578,6 +2603,7 @@
 
                     </div>
 
+
                     <div
                         class="certificate-card reveal"
                         data-image="./assets/certificates/conversational%20english%20skills.png"
@@ -2603,6 +2629,7 @@
                         </div>
 
                     </div>
+
 
                     <div
                         class="certificate-card reveal"
@@ -2631,6 +2658,9 @@
             </div>
 
         </section>
+
+
+        <!-- ================= EXPERIENCE ================= -->
 
         <section id="experience">
 
@@ -2673,6 +2703,7 @@
 
                     </div>
 
+
                     <div class="timeline-item reveal">
 
                         <div class="timeline-date">
@@ -2697,6 +2728,7 @@
 
                     </div>
 
+
                     <div class="timeline-item reveal">
 
                         <div class="timeline-date">
@@ -2719,6 +2751,7 @@
                         </p>
 
                     </div>
+
 
                     <div class="timeline-item reveal">
 
@@ -2750,6 +2783,9 @@
 
         </section>
 
+
+        <!-- ================= CONTACT ================= -->
+
         <section id="contact">
 
             <div class="container">
@@ -2768,7 +2804,7 @@
                         I'm open to cybersecurity opportunities,
                         freelance work, collaborations, and projects
                         where I can keep learning while creating
-                        meaningful security solutions.
+                        meaningful technical solutions.
                     </p>
 
                     <div class="contact-links">
@@ -2794,6 +2830,7 @@
 
                         </a>
 
+
                         <a
                             class="contact-link"
                             href="https://www.linkedin.com/in/shrouk-ali-a73177352"
@@ -2814,6 +2851,7 @@
                             LinkedIn
 
                         </a>
+
 
                         <a
                             class="contact-link"
@@ -2844,6 +2882,7 @@
 
                         </a>
 
+
                         <a
                             class="contact-link"
                             href="./assets/CV/CV.png"
@@ -2863,7 +2902,8 @@
 
     </main>
 
-    <!-- CERTIFICATE MODAL -->
+
+    <!-- ================= CERTIFICATE MODAL ================= -->
 
     <div
         class="modal"
@@ -2904,7 +2944,8 @@
 
     </div>
 
-    <!-- WORK MODAL -->
+
+    <!-- ================= WORK MODAL ================= -->
 
     <div
         class="modal"
@@ -2959,7 +3000,8 @@
 
     </div>
 
-    <!-- SKILL MODAL -->
+
+    <!-- ================= SKILL MODAL ================= -->
 
     <div
         class="modal"
@@ -3007,7 +3049,10 @@
 
     </div>
 
+
     <script>
+
+        /* ================= MOUSE GLOW ================= */
 
         const mouseGlow =
             document.getElementById("mouseGlow");
@@ -3024,6 +3069,9 @@
 
             }
         );
+
+
+        /* ================= REVEAL ANIMATION ================= */
 
         const revealElements =
             document.querySelectorAll(".reveal");
@@ -3068,6 +3116,9 @@
             }
         );
 
+
+        /* ================= PROFILE IMAGE ================= */
+
         const profileImage =
             document.getElementById(
                 "profileImage"
@@ -3090,6 +3141,9 @@
 
             }
         );
+
+
+        /* ================= CERTIFICATE MODAL ================= */
 
         const certificateModal =
             document.getElementById(
@@ -3240,6 +3294,9 @@
             }
         );
 
+
+        /* ================= WORK MODAL ================= */
+
         const workModal =
             document.getElementById(
                 "workModal"
@@ -3272,6 +3329,49 @@
 
         const workData = {
 
+            calculator: {
+
+                label:
+                    "Development",
+
+                title:
+                    "Building a Calculator",
+
+                description:
+                    "A C# programming project created to practice application logic, user interaction, calculations and fundamental programming concepts.",
+
+                items: [
+                    "Implemented arithmetic operations.",
+                    "Handled user input and application flow.",
+                    "Applied variables, conditions and programming logic.",
+                    "Practiced C# fundamentals through a practical application."
+                ]
+
+            },
+
+
+            database: {
+
+                label:
+                    "Database Project",
+
+                title:
+                    "Building a Company's Database using MySQL and SQL",
+
+                description:
+                    "A database project focused on designing and working with a company's data using MySQL and SQL, including structured data storage and querying.",
+
+                items: [
+                    "Designed a structured relational database for a company.",
+                    "Created tables and organized business-related data.",
+                    "Defined relationships between database entities.",
+                    "Used SQL queries to retrieve and manage information.",
+                    "Practiced database organization and relational database concepts."
+                ]
+
+            },
+
+
             fortress: {
 
                 label:
@@ -3292,6 +3392,7 @@
                 ]
 
             },
+
 
             securecorp: {
 
@@ -3315,68 +3416,6 @@
 
             },
 
-            "security-labs": {
-
-                label:
-                    "Security Labs",
-
-                title:
-                    "Threat & Vulnerability Labs",
-
-                description:
-                    "A collection of hands-on cybersecurity labs focused on network traffic analysis, vulnerability assessment, web security testing and threat investigation.",
-
-                items: [
-                    "Analyzed network traffic using Wireshark.",
-                    "Performed reconnaissance and scanning with Nmap.",
-                    "Worked with vulnerability assessment using Nessus.",
-                    "Practiced web security testing using Burp Suite and OWASP ZAP.",
-                    "Worked through phishing and email-analysis scenarios.",
-                    "Applied security monitoring and investigation workflows."
-                ]
-
-            },
-
-            calculator: {
-
-                label:
-                    "Development",
-
-                title:
-                    "Building a Calculator",
-
-                description:
-                    "A C# programming project created to practice application logic, user interaction, calculations and fundamental programming concepts.",
-
-                items: [
-                    "Implemented arithmetic operations.",
-                    "Handled user input and application flow.",
-                    "Applied variables, conditions and programming logic.",
-                    "Practiced C# fundamentals through a practical application."
-                ]
-
-            },
-
-            database: {
-
-                label:
-                    "Database Project",
-
-                title:
-                    "Building a Company's Database using MySQL and SQL",
-
-                description:
-                    "A database project focused on designing and working with a company's data using MySQL and SQL, including structured data storage and querying.",
-
-                items: [
-                    "Designed a structured relational database for a company.",
-                    "Created tables and organized business-related data.",
-                    "Defined relationships between database entities.",
-                    "Used SQL queries to retrieve and manage information.",
-                    "Practiced database organization and relational database concepts."
-                ]
-
-            },
 
             soc: {
 
@@ -3398,9 +3437,33 @@
                     "Applied security analysis through hands-on labs."
                 ]
 
+            },
+
+
+            "security-labs": {
+
+                label:
+                    "Security Labs",
+
+                title:
+                    "Threat & Vulnerability Labs",
+
+                description:
+                    "A collection of hands-on cybersecurity labs focused on network traffic analysis, vulnerability assessment, web security testing and threat investigation.",
+
+                items: [
+                    "Analyzed network traffic using Wireshark.",
+                    "Performed reconnaissance and scanning with Nmap.",
+                    "Worked with vulnerability assessment using Nessus.",
+                    "Practiced web security testing using Burp Suite and OWASP ZAP.",
+                    "Worked through phishing and email-analysis scenarios.",
+                    "Applied security monitoring and investigation workflows."
+                ]
+
             }
 
         };
+
 
         document
             .querySelectorAll(".work-card")
@@ -3469,6 +3532,7 @@
                 }
             );
 
+
         function closeWorkModal() {
 
             workModal.classList.remove(
@@ -3505,6 +3569,9 @@
 
             }
         );
+
+
+        /* ================= SKILL MODAL ================= */
 
         const skillModal =
             document.getElementById(
@@ -3551,6 +3618,7 @@
 
             },
 
+
             network: {
 
                 title:
@@ -3570,6 +3638,7 @@
 
             },
 
+
             vulnerability: {
 
                 title:
@@ -3586,6 +3655,7 @@
                 ]
 
             },
+
 
             web: {
 
@@ -3604,6 +3674,7 @@
 
             },
 
+
             linux: {
 
                 title:
@@ -3620,6 +3691,7 @@
                 ]
 
             },
+
 
             tools: {
 
@@ -3640,6 +3712,7 @@
 
             },
 
+
             programming: {
 
                 title:
@@ -3657,6 +3730,7 @@
                 ]
 
             },
+
 
             ai: {
 
@@ -3677,6 +3751,7 @@
             }
 
         };
+
 
         document
             .querySelectorAll(".skill-card")
@@ -3745,6 +3820,7 @@
                 }
             );
 
+
         function closeSkillModal() {
 
             skillModal.classList.remove(
@@ -3782,6 +3858,9 @@
             }
         );
 
+
+        /* ================= ESCAPE ================= */
+
         document.addEventListener(
             "keydown",
             function (event) {
@@ -3798,6 +3877,9 @@
 
             }
         );
+
+
+        /* ================= ACTIVE NAV ================= */
 
         const sections =
             document.querySelectorAll(
