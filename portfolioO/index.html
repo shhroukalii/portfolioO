@@ -3,14 +3,13 @@
 
 <head>
     <meta charset="UTF-8">
-
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
     <title>Shrouk Ali | Cybersecurity Portfolio</title>
 
     <meta
         name="description"
-        content="Shrouk Ali — Cybersecurity graduate focused on SOC operations, security monitoring, network security, incident response and vulnerability assessment."
+        content="Shrouk Ali — Cybersecurity graduate and freelancer focused on cybersecurity, modern websites, technical projects and digital solutions."
     >
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -39,8 +38,7 @@
 
             --border: rgba(255, 77, 163, 0.18);
 
-            --shadow:
-                0 25px 80px rgba(0, 0, 0, 0.45);
+            --shadow: 0 25px 80px rgba(0, 0, 0, 0.45);
 
             --radius: 24px;
         }
@@ -57,7 +55,6 @@
 
         body {
             font-family: "DM Sans", sans-serif;
-
             background:
                 radial-gradient(
                     circle at 15% 10%,
@@ -70,7 +67,6 @@
                     transparent 25%
                 ),
                 var(--bg);
-
             color: var(--text);
             overflow-x: hidden;
         }
@@ -123,42 +119,34 @@
             width: 320px;
             height: 320px;
             border-radius: 50%;
-
             background:
                 radial-gradient(
                     circle,
                     rgba(255, 63, 159, 0.09),
                     transparent 70%
                 );
-
             transform: translate(-50%, -50%);
             pointer-events: none;
             z-index: -1;
         }
+
+        /* ================= NAVBAR ================= */
 
         .navbar {
             position: fixed;
             top: 18px;
             left: 50%;
             transform: translateX(-50%);
-
             width: min(1180px, calc(100% - 30px));
-
             display: flex;
             align-items: center;
             justify-content: space-between;
-
             padding: 13px 18px;
-
             background: rgba(12, 7, 12, 0.72);
-
             border: 1px solid var(--border);
-
             backdrop-filter: blur(20px);
             -webkit-backdrop-filter: blur(20px);
-
             border-radius: 18px;
-
             z-index: 1000;
         }
 
@@ -237,6 +225,8 @@
             line-height: 1.8;
         }
 
+        /* ================= HERO ================= */
+
         .hero {
             min-height: 100vh;
             display: flex;
@@ -257,17 +247,12 @@
             align-items: center;
             gap: 9px;
             padding: 8px 13px;
-
             border: 1px solid rgba(255, 63, 159, 0.2);
-
             background: rgba(255, 63, 159, 0.055);
-
             border-radius: 999px;
-
             color: #eec8dc;
             font-size: 12px;
             font-weight: 600;
-
             margin-bottom: 25px;
         }
 
@@ -276,7 +261,6 @@
             height: 7px;
             border-radius: 50%;
             background: #ff4ca5;
-
             box-shadow: 0 0 14px #ff4ca5;
         }
 
@@ -292,10 +276,6 @@
 
         .hero h1 .highlight {
             color: var(--pink);
-            font-size: inherit;
-            font-weight: inherit;
-            line-height: inherit;
-            letter-spacing: inherit;
         }
 
         .hero-description {
@@ -318,28 +298,21 @@
             align-items: center;
             justify-content: center;
             gap: 8px;
-
             min-height: 48px;
             padding: 0 19px;
-
             border-radius: 13px;
-
             font-size: 13px;
             font-weight: 700;
-
             transition: 0.25s ease;
         }
 
         .btn-primary {
             color: white;
-
-            background:
-                linear-gradient(
-                    135deg,
-                    #ff3f9f,
-                    #db217f
-                );
-
+            background: linear-gradient(
+                135deg,
+                #ff3f9f,
+                #db217f
+            );
             box-shadow:
                 0 12px 35px
                 rgba(255, 63, 159, 0.18);
@@ -347,30 +320,20 @@
 
         .btn-primary:hover {
             transform: translateY(-3px);
-
             box-shadow:
                 0 18px 40px
                 rgba(255, 63, 159, 0.28);
         }
 
         .btn-outline {
-            border:
-                1px solid
-                rgba(255, 255, 255, 0.1);
-
+            border: 1px solid rgba(255, 255, 255, 0.1);
             color: #eee;
-
-            background:
-                rgba(255, 255, 255, 0.025);
+            background: rgba(255, 255, 255, 0.025);
         }
 
         .btn-outline:hover {
-            border-color:
-                rgba(255, 63, 159, 0.4);
-
-            background:
-                rgba(255, 63, 159, 0.07);
-
+            border-color: rgba(255, 63, 159, 0.4);
+            background: rgba(255, 63, 159, 0.07);
             transform: translateY(-3px);
         }
 
@@ -390,6 +353,8 @@
             color: var(--pink-light);
         }
 
+        /* ================= PROFILE ================= */
+
         .hero-visual {
             position: relative;
             display: flex;
@@ -400,7 +365,6 @@
             position: relative;
             width: min(420px, 82vw);
             aspect-ratio: 1;
-
             display: flex;
             align-items: center;
             justify-content: center;
@@ -409,12 +373,9 @@
         .profile-wrap::before {
             content: "";
             position: absolute;
-
             width: 470px;
             height: 470px;
-
             border-radius: 50%;
-
             background:
                 radial-gradient(
                     circle,
@@ -423,48 +384,27 @@
                     rgba(168, 85, 247, 0.10) 48%,
                     transparent 72%
                 );
-
             filter: blur(5px);
             z-index: -3;
-
-            animation:
-                pulseHalo
-                4s
-                ease-in-out
-                infinite;
+            animation: pulseHalo 4s ease-in-out infinite;
         }
 
         .profile-wrap::after {
             content: "";
-
             position: absolute;
-
             width: 94%;
             height: 94%;
-
             border-radius: 50%;
-
-            border:
-                1px dashed
-                rgba(255, 63, 159, 0.22);
-
+            border: 1px dashed rgba(255, 63, 159, 0.22);
             box-shadow:
                 0 0 35px rgba(255, 63, 159, 0.08);
-
-            animation:
-                reverseRing
-                25s
-                linear
-                infinite;
-
+            animation: reverseRing 25s linear infinite;
             pointer-events: none;
             z-index: 0;
         }
 
         @keyframes pulseHalo {
-
-            0%,
-            100% {
+            0%, 100% {
                 transform: scale(0.96);
                 opacity: 0.78;
             }
@@ -476,7 +416,6 @@
         }
 
         @keyframes reverseRing {
-
             to {
                 transform: rotate(-360deg);
             }
@@ -485,39 +424,22 @@
         .profile-ring {
             position: absolute;
             inset: 0;
-
             border-radius: 50%;
-
-            border:
-                1px solid
-                rgba(255, 63, 159, 0.32);
-
+            border: 1px solid rgba(255, 63, 159, 0.32);
             box-shadow:
-                0 0 50px
-                rgba(255, 63, 159, 0.08);
-
-            animation:
-                rotateRing
-                18s
-                linear
-                infinite;
-
+                0 0 50px rgba(255, 63, 159, 0.08);
+            animation: rotateRing 18s linear infinite;
             z-index: 1;
         }
 
         .profile-ring::before,
         .profile-ring::after {
             content: "";
-
             position: absolute;
-
             width: 10px;
             height: 10px;
-
             border-radius: 50%;
-
             background: var(--pink);
-
             box-shadow:
                 0 0 20px var(--pink),
                 0 0 35px rgba(255, 63, 159, 0.55);
@@ -534,69 +456,47 @@
         }
 
         @keyframes rotateRing {
-
             to {
                 transform: rotate(360deg);
             }
         }
 
-        .profile-wrap .profile-card::before {
-            content: "";
-
-            position: absolute;
-            inset: 14px;
-
-            border-radius: 50%;
-
-            border:
-                1px solid
-                rgba(255, 118, 189, 0.14);
-
-            box-shadow:
-                inset 0 0 30px
-                rgba(255, 63, 159, 0.08);
-
-            z-index: 3;
-            pointer-events: none;
-        }
-
         .profile-card {
             position: absolute;
             inset: 42px;
-
             border-radius: 50%;
             overflow: hidden;
-
-            border:
-                1px solid
-                rgba(255, 63, 159, 0.48);
-
+            border: 1px solid rgba(255, 63, 159, 0.48);
             background:
                 radial-gradient(
                     circle at center,
                     rgba(255, 63, 159, 0.16),
                     rgba(17, 8, 16, 0.96)
                 );
-
             box-shadow:
-                0 0 90px
-                rgba(255, 63, 159, 0.18),
-                0 0 30px
-                rgba(168, 85, 247, 0.10),
-                inset 0 0 35px
-                rgba(255, 63, 159, 0.08);
-
+                0 0 90px rgba(255, 63, 159, 0.18),
+                0 0 30px rgba(168, 85, 247, 0.10),
+                inset 0 0 35px rgba(255, 63, 159, 0.08);
             z-index: 2;
+        }
+
+        .profile-card::before {
+            content: "";
+            position: absolute;
+            inset: 14px;
+            border-radius: 50%;
+            border: 1px solid rgba(255, 118, 189, 0.14);
+            box-shadow:
+                inset 0 0 30px rgba(255, 63, 159, 0.08);
+            z-index: 3;
+            pointer-events: none;
         }
 
         .profile-card::after {
             content: "";
-
             position: absolute;
             inset: 0;
-
             border-radius: 50%;
-
             background:
                 linear-gradient(
                     135deg,
@@ -605,7 +505,6 @@
                     transparent 65%,
                     rgba(255, 63, 159, 0.10)
                 );
-
             pointer-events: none;
             z-index: 4;
         }
@@ -613,70 +512,38 @@
         .profile-card img {
             width: 100%;
             height: 100%;
-
             object-fit: cover;
             display: block;
-
-            transition:
-                transform 0.6s ease,
-                filter 0.6s ease;
+            transition: 0.6s ease;
         }
 
         .profile-card:hover img {
             transform: scale(1.035);
-
-            filter:
-                saturate(1.08)
-                contrast(1.03);
+            filter: saturate(1.08) contrast(1.03);
         }
 
         .profile-fallback {
             position: absolute;
             inset: 0;
-
             display: none;
-
             align-items: center;
             justify-content: center;
-
-            font-family:
-                "Space Grotesk",
-                sans-serif;
-
+            font-family: "Space Grotesk", sans-serif;
             font-size: 90px;
             font-weight: 700;
-
             color: var(--pink);
-
-            background:
-                radial-gradient(
-                    circle,
-                    rgba(255, 63, 159, 0.15),
-                    transparent 65%
-                );
         }
 
         .profile-badge {
             position: absolute;
-
             right: -4px;
             bottom: 48px;
-
             padding: 13px 16px;
-
-            background:
-                rgba(16, 8, 15, 0.9);
-
-            border:
-                1px solid
-                rgba(255, 63, 159, 0.25);
-
+            background: rgba(16, 8, 15, 0.9);
+            border: 1px solid rgba(255, 63, 159, 0.25);
             backdrop-filter: blur(16px);
-
             border-radius: 15px;
-
             box-shadow: var(--shadow);
-
             z-index: 5;
         }
 
@@ -693,6 +560,8 @@
             margin-top: 3px;
         }
 
+        /* ================= ABOUT ================= */
+
         .about-layout {
             display: grid;
             grid-template-columns: 0.8fr 1.2fr;
@@ -701,13 +570,8 @@
         }
 
         .about-intro {
-            font-family:
-                "Space Grotesk",
-                sans-serif;
-
-            font-size:
-                clamp(27px, 3vw, 39px);
-
+            font-family: "Space Grotesk", sans-serif;
+            font-size: clamp(27px, 3vw, 39px);
             line-height: 1.2;
             letter-spacing: -1px;
         }
@@ -726,53 +590,7 @@
             color: var(--pink-light);
         }
 
-        .about-highlights {
-            display: grid;
-            grid-template-columns: repeat(2, 1fr);
-            gap: 12px;
-            margin-top: 30px;
-        }
-
-        .about-highlight {
-            padding: 18px;
-
-            border:
-                1px solid
-                var(--border);
-
-            background:
-                rgba(255, 255, 255, 0.018);
-
-            border-radius: 16px;
-            transition: 0.25s ease;
-        }
-
-        .about-highlight:hover {
-            transform: translateY(-4px);
-
-            border-color:
-                rgba(255, 63, 159, 0.3);
-
-            background:
-                rgba(255, 63, 159, 0.035);
-        }
-
-        .about-highlight strong {
-            display: block;
-
-            font-family:
-                "Space Grotesk",
-                sans-serif;
-
-            font-size: 18px;
-            color: white;
-            margin-bottom: 5px;
-        }
-
-        .about-highlight span {
-            color: #91828d;
-            font-size: 12px;
-        }
+        /* ================= SKILLS ================= */
 
         .skills-header {
             display: flex;
@@ -783,8 +601,6 @@
         }
 
         .skills-tree {
-            position: relative;
-
             display: grid;
             grid-template-columns: repeat(4, 1fr);
             gap: 18px;
@@ -792,37 +608,23 @@
 
         .skill-card {
             position: relative;
-
             min-height: 160px;
             padding: 25px 20px;
-
-            border:
-                1px solid
-                var(--border);
-
+            border: 1px solid var(--border);
             border-radius: 20px;
-
             background:
                 linear-gradient(
                     145deg,
                     rgba(255, 63, 159, 0.07),
                     rgba(255, 255, 255, 0.015)
                 );
-
             cursor: pointer;
-
-            transition:
-                transform 0.25s ease,
-                border-color 0.25s ease,
-                background 0.25s ease;
+            transition: 0.25s ease;
         }
 
         .skill-card:hover {
             transform: translateY(-7px);
-
-            border-color:
-                rgba(255, 63, 159, 0.4);
-
+            border-color: rgba(255, 63, 159, 0.4);
             background:
                 linear-gradient(
                     145deg,
@@ -841,29 +643,19 @@
         .skill-icon {
             width: 42px;
             height: 42px;
-
             display: flex;
             align-items: center;
             justify-content: center;
-
             border-radius: 12px;
-
             margin: 20px 0 17px;
-
             color: var(--pink);
-
-            background:
-                rgba(255, 63, 159, 0.08);
-
+            background: rgba(255, 63, 159, 0.08);
             font-size: 18px;
             font-weight: 700;
         }
 
         .skill-card h3 {
-            font-family:
-                "Space Grotesk",
-                sans-serif;
-
+            font-family: "Space Grotesk", sans-serif;
             font-size: 16px;
             margin-bottom: 7px;
         }
@@ -874,6 +666,8 @@
             line-height: 1.6;
         }
 
+        /* ================= WORK ================= */
+
         .work-grid {
             display: grid;
             grid-template-columns: repeat(3, 1fr);
@@ -883,41 +677,27 @@
 
         .work-card {
             overflow: hidden;
-
-            border:
-                1px solid
-                var(--border);
-
+            border: 1px solid var(--border);
             border-radius: 18px;
-
-            background:
-                rgba(255, 255, 255, 0.018);
-
+            background: rgba(255, 255, 255, 0.018);
             cursor: pointer;
             transition: 0.25s ease;
         }
 
         .work-card:hover {
             transform: translateY(-6px);
-
-            border-color:
-                rgba(255, 63, 159, 0.4);
-
+            border-color: rgba(255, 63, 159, 0.4);
             box-shadow:
-                0 18px 50px
-                rgba(0, 0, 0, 0.28);
+                0 18px 50px rgba(0, 0, 0, 0.28);
         }
 
         .work-preview {
             position: relative;
-
             height: 190px;
             overflow: hidden;
-
             display: flex;
             align-items: center;
             justify-content: center;
-
             background:
                 radial-gradient(
                     circle at 25% 30%,
@@ -934,28 +714,33 @@
                     #180b16,
                     #0e0710
                 );
-
             border-bottom:
-                1px solid
-                rgba(255, 63, 159, 0.13);
+                1px solid rgba(255, 63, 159, 0.13);
         }
+
+        /*
+            PROJECT IMAGES
+            ================================
+            Exact filenames:
+
+            calculator.png
+            database.png
+            cyber AI fortress.png
+            securecorp.png
+            soc-monitoring.png
+            threat-vulnerability.png
+        */
 
         .work-project-image {
             position: absolute;
             inset: 0;
-
             width: 100%;
             height: 100%;
-
             display: block;
-
             object-fit: cover;
-
             z-index: 1;
-
             opacity: 1;
             visibility: visible;
-
             transition:
                 transform 0.45s ease,
                 filter 0.45s ease;
@@ -963,7 +748,6 @@
 
         .work-card:hover .work-project-image {
             transform: scale(1.04);
-
             filter:
                 saturate(1.08)
                 contrast(1.03);
@@ -971,54 +755,30 @@
 
         .work-preview::before {
             content: "";
-
             position: absolute;
-
             width: 150px;
             height: 150px;
-
             border-radius: 50%;
-
-            border:
-                1px solid
-                rgba(255, 63, 159, 0.25);
-
+            border: 1px solid rgba(255, 63, 159, 0.25);
             box-shadow:
-                0 0 45px
-                rgba(255, 63, 159, 0.12);
-
-            animation:
-                workRotate
-                12s
-                linear
-                infinite;
-
+                0 0 45px rgba(255, 63, 159, 0.12);
+            animation: workRotate 12s linear infinite;
             z-index: 2;
-
             pointer-events: none;
         }
 
         .work-preview::after {
             content: "";
-
             position: absolute;
-
             width: 70px;
             height: 70px;
-
             border-radius: 50%;
-
-            border:
-                1px solid
-                rgba(255, 118, 189, 0.28);
-
+            border: 1px solid rgba(255, 118, 189, 0.28);
             z-index: 2;
-
             pointer-events: none;
         }
 
         @keyframes workRotate {
-
             to {
                 transform: rotate(360deg);
             }
@@ -1026,31 +786,18 @@
 
         .work-icon {
             position: absolute;
-
             top: 16px;
             right: 16px;
-
             width: 34px;
             height: 34px;
-
             display: flex;
-
             align-items: center;
             justify-content: center;
-
             border-radius: 10px;
-
             color: var(--pink-light);
-
-            background:
-                rgba(10, 5, 10, 0.75);
-
-            border:
-                1px solid
-                rgba(255, 63, 159, 0.18);
-
+            background: rgba(10, 5, 10, 0.75);
+            border: 1px solid rgba(255, 63, 159, 0.18);
             font-size: 14px;
-
             z-index: 4;
         }
 
@@ -1060,23 +807,16 @@
 
         .work-tag {
             display: inline-block;
-
             color: var(--pink-light);
-
             font-size: 10px;
             font-weight: 700;
-
             letter-spacing: 1px;
             text-transform: uppercase;
-
             margin-bottom: 9px;
         }
 
         .work-info h3 {
-            font-family:
-                "Space Grotesk",
-                sans-serif;
-
+            font-family: "Space Grotesk", sans-serif;
             font-size: 16px;
             line-height: 1.35;
             margin-bottom: 7px;
@@ -1087,6 +827,8 @@
             font-size: 11px;
         }
 
+        /* ================= CERTIFICATES ================= */
+
         .certificates-grid {
             display: grid;
             grid-template-columns: repeat(3, 1fr);
@@ -1096,38 +838,25 @@
 
         .certificate-card {
             overflow: hidden;
-
-            border:
-                1px solid
-                var(--border);
-
+            border: 1px solid var(--border);
             border-radius: 18px;
-
-            background:
-                rgba(255, 255, 255, 0.018);
-
+            background: rgba(255, 255, 255, 0.018);
             cursor: pointer;
             transition: 0.25s ease;
         }
 
         .certificate-card:hover {
             transform: translateY(-6px);
-
-            border-color:
-                rgba(255, 63, 159, 0.4);
-
+            border-color: rgba(255, 63, 159, 0.4);
             box-shadow:
-                0 18px 50px
-                rgba(0, 0, 0, 0.28);
+                0 18px 50px rgba(0, 0, 0, 0.28);
         }
 
         .certificate-image {
             width: 100%;
             height: 190px;
-
             display: block;
             object-fit: cover;
-
             background:
                 linear-gradient(
                     135deg,
@@ -1141,10 +870,7 @@
         }
 
         .certificate-info h3 {
-            font-family:
-                "Space Grotesk",
-                sans-serif;
-
+            font-family: "Space Grotesk", sans-serif;
             font-size: 15px;
             line-height: 1.35;
             margin-bottom: 7px;
@@ -1155,13 +881,12 @@
             font-size: 11px;
         }
 
+        /* ================= EXPERIENCE ================= */
+
         .timeline {
             margin-top: 45px;
-
             border-left:
-                1px solid
-                rgba(255, 63, 159, 0.18);
-
+                1px solid rgba(255, 63, 159, 0.18);
             padding-left: 30px;
         }
 
@@ -1176,20 +901,13 @@
 
         .timeline-item::before {
             content: "";
-
             position: absolute;
-
             width: 9px;
             height: 9px;
-
             border-radius: 50%;
-
             background: var(--pink);
-
             box-shadow:
-                0 0 15px
-                rgba(255, 63, 159, 0.7);
-
+                0 0 15px rgba(255, 63, 159, 0.7);
             left: -35px;
             top: 5px;
         }
@@ -1203,10 +921,7 @@
         }
 
         .timeline-item h3 {
-            font-family:
-                "Space Grotesk",
-                sans-serif;
-
+            font-family: "Space Grotesk", sans-serif;
             font-size: 21px;
             margin-bottom: 5px;
         }
@@ -1225,18 +940,15 @@
             max-width: 700px;
         }
 
+        /* ================= CONTACT ================= */
+
         .contact-box {
             position: relative;
             overflow: hidden;
-
             padding: 55px;
-
             border:
-                1px solid
-                rgba(255, 63, 159, 0.2);
-
+                1px solid rgba(255, 63, 159, 0.2);
             border-radius: 28px;
-
             background:
                 radial-gradient(
                     circle at 80% 20%,
@@ -1244,7 +956,6 @@
                     transparent 35%
                 ),
                 rgba(255, 255, 255, 0.018);
-
             text-align: center;
         }
 
@@ -1253,15 +964,9 @@
         }
 
         .contact-box h2 {
-            font-family:
-                "Space Grotesk",
-                sans-serif;
-
-            font-size:
-                clamp(34px, 5vw, 58px);
-
+            font-family: "Space Grotesk", sans-serif;
+            font-size: clamp(34px, 5vw, 58px);
             letter-spacing: -2px;
-
             max-width: 650px;
             margin: 0 auto 16px;
         }
@@ -1284,34 +989,22 @@
             display: inline-flex;
             align-items: center;
             gap: 9px;
-
             min-height: 45px;
             padding: 0 15px;
-
             border-radius: 12px;
-
             border:
-                1px solid
-                rgba(255, 255, 255, 0.09);
-
+                1px solid rgba(255, 255, 255, 0.09);
             background:
                 rgba(255, 255, 255, 0.025);
-
             color: #ddd0d8;
             font-size: 12px;
-
             transition: 0.2s ease;
         }
 
         .contact-link:hover {
             color: white;
-
-            border-color:
-                rgba(255, 63, 159, 0.35);
-
-            background:
-                rgba(255, 63, 159, 0.07);
-
+            border-color: rgba(255, 63, 159, 0.35);
+            background: rgba(255, 63, 159, 0.07);
             transform: translateY(-2px);
         }
 
@@ -1327,23 +1020,18 @@
             text-align: center;
         }
 
+        /* ================= MODALS ================= */
+
         .modal {
             position: fixed;
             inset: 0;
-
             display: none;
-
             align-items: center;
             justify-content: center;
-
             padding: 25px;
-
-            background:
-                rgba(3, 2, 4, 0.88);
-
+            background: rgba(3, 2, 4, 0.88);
             backdrop-filter: blur(14px);
             -webkit-backdrop-filter: blur(14px);
-
             z-index: 5000;
         }
 
@@ -1353,7 +1041,6 @@
         }
 
         @keyframes modalIn {
-
             from {
                 opacity: 0;
             }
@@ -1365,86 +1052,63 @@
 
         .modal-content {
             position: relative;
-
             width: min(1000px, 95vw);
             max-height: 92vh;
-
             display: flex;
             flex-direction: column;
-
             background: #100910;
-
             border:
-                1px solid
-                rgba(255, 63, 159, 0.25);
-
+                1px solid rgba(255, 63, 159, 0.25);
             border-radius: 20px;
             overflow: hidden;
-
             box-shadow:
-                0 30px 100px
-                rgba(0, 0, 0, 0.7);
+                0 30px 100px rgba(0, 0, 0, 0.7);
         }
 
         .modal-header {
             display: flex;
             align-items: center;
             justify-content: space-between;
-
             padding: 15px 18px;
-
             border-bottom:
-                1px solid
-                rgba(255, 255, 255, 0.06);
+                1px solid rgba(255, 255, 255, 0.06);
         }
 
         .modal-header h3 {
-            font-family:
-                "Space Grotesk",
-                sans-serif;
-
+            font-family: "Space Grotesk", sans-serif;
             font-size: 14px;
         }
 
         .modal-close {
             width: 36px;
             height: 36px;
-
             border: 0;
             border-radius: 10px;
-
             color: white;
-
             background:
                 rgba(255, 255, 255, 0.06);
-
             cursor: pointer;
             font-size: 20px;
-
             transition: 0.2s;
         }
 
         .modal-close:hover {
             background:
                 rgba(255, 63, 159, 0.15);
-
             color: var(--pink-light);
         }
 
         .modal-body {
             padding: 18px;
             overflow: auto;
-
             display: flex;
             justify-content: center;
         }
 
         .modal-body img {
             display: block;
-
             max-width: 100%;
             max-height: 76vh;
-
             object-fit: contain;
             border-radius: 10px;
         }
@@ -1459,25 +1123,17 @@
 
         .work-modal-label {
             display: inline-block;
-
             color: var(--pink-light);
-
             font-size: 10px;
             font-weight: 700;
             letter-spacing: 1.4px;
             text-transform: uppercase;
-
             margin-bottom: 12px;
         }
 
         .work-modal-body h3 {
-            font-family:
-                "Space Grotesk",
-                sans-serif;
-
-            font-size:
-                clamp(27px, 4vw, 38px);
-
+            font-family: "Space Grotesk", sans-serif;
+            font-size: clamp(27px, 4vw, 38px);
             line-height: 1.1;
             margin-bottom: 15px;
         }
@@ -1498,7 +1154,6 @@
             display: flex;
             align-items: flex-start;
             gap: 10px;
-
             color: #cbbdc6;
             font-size: 13px;
             line-height: 1.6;
@@ -1519,10 +1174,7 @@
         }
 
         .skill-modal-body h3 {
-            font-family:
-                "Space Grotesk",
-                sans-serif;
-
+            font-family: "Space Grotesk", sans-serif;
             font-size: 27px;
             margin-bottom: 13px;
         }
@@ -1542,27 +1194,20 @@
 
         .modal-tag {
             padding: 7px 10px;
-
             border-radius: 8px;
-
             color: #d8c8d2;
-
             background:
                 rgba(255, 63, 159, 0.07);
-
             border:
-                1px solid
-                rgba(255, 63, 159, 0.12);
-
+                1px solid rgba(255, 63, 159, 0.12);
             font-size: 10px;
         }
 
+        /* ================= ANIMATION ================= */
+
         .reveal {
             opacity: 0;
-
-            transform:
-                translateY(25px);
-
+            transform: translateY(25px);
             transition:
                 opacity 0.7s ease,
                 transform 0.7s ease;
@@ -1570,10 +1215,10 @@
 
         .reveal.visible {
             opacity: 1;
-
-            transform:
-                translateY(0);
+            transform: translateY(0);
         }
+
+        /* ================= RESPONSIVE ================= */
 
         @media (max-width: 950px) {
 
@@ -1643,22 +1288,13 @@
             }
 
             .container {
-                width:
-                    min(
-                        100% - 28px,
-                        1120px
-                    );
+                width: min(100% - 28px, 1120px);
             }
 
             .hero h1 {
                 font-size: 39px;
                 letter-spacing: -1.8px;
                 line-height: 1.08;
-            }
-
-            .hero h1 .highlight {
-                font-size: inherit;
-                font-weight: inherit;
             }
 
             .hero-description {
@@ -1681,10 +1317,6 @@
             .profile-badge {
                 right: -10px;
                 bottom: 25px;
-            }
-
-            .about-highlights {
-                grid-template-columns: 1fr;
             }
 
             .skills-header {
@@ -1745,7 +1377,6 @@
         </a>
 
         <div class="nav-links">
-
             <a href="#home" class="active">Home</a>
             <a href="#about">About</a>
             <a href="#skills">Skills</a>
@@ -1753,7 +1384,6 @@
             <a href="#certificates">Certificates</a>
             <a href="#experience">Experience</a>
             <a href="#contact">Contact</a>
-
         </div>
 
     </nav>
@@ -1786,10 +1416,9 @@
 
                         <p class="hero-description">
                             I'm Shrouk Ali, a 2026 Cyber Security graduate
-                            with hands-on exposure to SOC operations,
-                            security monitoring, network security,
-                            incident response, vulnerability assessment,
-                            and AI-driven security solutions.
+                            who enjoys combining cybersecurity knowledge,
+                            technical problem-solving, and modern digital
+                            solutions to build practical work.
                         </p>
 
                         <div class="hero-actions">
@@ -1805,10 +1434,10 @@
                             </a>
 
                             <a
-                                href="#skills"
+                                href="#work"
                                 class="btn btn-outline"
                             >
-                                Explore My Skills
+                                Explore My Work
                                 <span>→</span>
                             </a>
 
@@ -1908,7 +1537,7 @@
                                 Cyber Security graduate
                             </span>
                             and freelancer who enjoys turning
-                            ideas into practical digital solutions.
+                            ideas into meaningful digital experiences.
 
                         </div>
 
@@ -1918,88 +1547,24 @@
                     <div class="reveal">
 
                         <p class="about-text">
+                            I enjoy taking an idea from the first
+                            conversation and turning it into something
+                            clear, modern, and easy to use.
+                        </p>
+
+                        <p class="about-text">
                             I work with clients to understand what they
-                            need and turn their ideas into
-                            <span>
-                                professional, modern and responsive websites
-                            </span>
-                            and digital solutions.
+                            actually need, organize their requirements,
+                            and build solutions that fit their goals —
+                            whether it's a personal portfolio, a business
+                            website, a database, or a technical project.
                         </p>
 
                         <p class="about-text">
-                            I can help with
-                            <span>
-                                personal portfolios, business websites,
-                                databases and technical projects
-                            </span>
-                            while keeping the work clean, organized
-                            and easy to use.
+                            I care about the details, the user experience,
+                            and making sure the final result is not only
+                            good-looking, but also practical and useful.
                         </p>
-
-                        <p class="about-text">
-                            My goal is simple:
-                            <span>
-                                understand the requirements, build the
-                                solution carefully, and deliver practical
-                                results that match the client's needs.
-                            </span>
-                        </p>
-
-
-                        <div class="about-highlights">
-
-                            <div class="about-highlight">
-
-                                <strong>
-                                    Cybersecurity
-                                </strong>
-
-                                <span>
-                                    SOC • Security • Networking
-                                </span>
-
-                            </div>
-
-
-                            <div class="about-highlight">
-
-                                <strong>
-                                    Websites
-                                </strong>
-
-                                <span>
-                                    Modern & Responsive Designs
-                                </span>
-
-                            </div>
-
-
-                            <div class="about-highlight">
-
-                                <strong>
-                                    Technical Work
-                                </strong>
-
-                                <span>
-                                    Databases • Programming • Projects
-                                </span>
-
-                            </div>
-
-
-                            <div class="about-highlight">
-
-                                <strong>
-                                    Client Focused
-                                </strong>
-
-                                <span>
-                                    Clear Requirements • Practical Results
-                                </span>
-
-                            </div>
-
-                        </div>
 
                     </div>
 
@@ -2270,7 +1835,7 @@
                 <div class="work-grid">
 
 
-                    <!-- 01 - CALCULATOR -->
+                    <!-- 01 -->
 
                     <div
                         class="work-card reveal"
@@ -2310,7 +1875,7 @@
                     </div>
 
 
-                    <!-- 02 - DATABASE -->
+                    <!-- 02 -->
 
                     <div
                         class="work-card reveal"
@@ -2351,7 +1916,7 @@
                     </div>
 
 
-                    <!-- 03 - CYBER AI FORTRESS -->
+                    <!-- 03 -->
 
                     <div
                         class="work-card reveal"
@@ -2391,7 +1956,7 @@
                     </div>
 
 
-                    <!-- 04 - SECURECORP -->
+                    <!-- 04 -->
 
                     <div
                         class="work-card reveal"
@@ -2431,7 +1996,7 @@
                     </div>
 
 
-                    <!-- 05 - SOC -->
+                    <!-- 05 -->
 
                     <div
                         class="work-card reveal"
@@ -2471,7 +2036,7 @@
                     </div>
 
 
-                    <!-- 06 - THREAT & VULNERABILITY -->
+                    <!-- 06 -->
 
                     <div
                         class="work-card reveal"
@@ -2552,15 +2117,8 @@
                         >
 
                         <div class="certificate-info">
-
-                            <h3>
-                                Pre Security
-                            </h3>
-
-                            <span>
-                                TryHackMe
-                            </span>
-
+                            <h3>Pre Security</h3>
+                            <span>TryHackMe</span>
                         </div>
 
                     </div>
@@ -2579,15 +2137,8 @@
                         >
 
                         <div class="certificate-info">
-
-                            <h3>
-                                Introduction to Network Security
-                            </h3>
-
-                            <span>
-                                Cybersecurity Training
-                            </span>
-
+                            <h3>Introduction to Network Security</h3>
+                            <span>Cybersecurity Training</span>
                         </div>
 
                     </div>
@@ -2606,15 +2157,8 @@
                         >
 
                         <div class="certificate-info">
-
-                            <h3>
-                                CN Fundamentals
-                            </h3>
-
-                            <span>
-                                Networking
-                            </span>
-
+                            <h3>CN Fundamentals</h3>
+                            <span>Networking</span>
                         </div>
 
                     </div>
@@ -2633,15 +2177,8 @@
                         >
 
                         <div class="certificate-info">
-
-                            <h3>
-                                Introduction to Database
-                            </h3>
-
-                            <span>
-                                Database Fundamentals
-                            </span>
-
+                            <h3>Introduction to Database</h3>
+                            <span>Database Fundamentals</span>
                         </div>
 
                     </div>
@@ -2660,15 +2197,8 @@
                         >
 
                         <div class="certificate-info">
-
-                            <h3>
-                                Building a Calculator
-                            </h3>
-
-                            <span>
-                                Programming
-                            </span>
-
+                            <h3>Building a Calculator</h3>
+                            <span>Programming</span>
                         </div>
 
                     </div>
@@ -2687,15 +2217,8 @@
                         >
 
                         <div class="certificate-info">
-
-                            <h3>
-                                Building a Company
-                            </h3>
-
-                            <span>
-                                Training
-                            </span>
-
+                            <h3>Building a Company</h3>
+                            <span>Training</span>
                         </div>
 
                     </div>
@@ -2714,15 +2237,8 @@
                         >
 
                         <div class="certificate-info">
-
-                            <h3>
-                                Intro to AI & Applications
-                            </h3>
-
-                            <span>
-                                Artificial Intelligence
-                            </span>
-
+                            <h3>Intro to AI & Applications</h3>
+                            <span>Artificial Intelligence</span>
                         </div>
 
                     </div>
@@ -2741,15 +2257,8 @@
                         >
 
                         <div class="certificate-info">
-
-                            <h3>
-                                Intro to Web Development
-                            </h3>
-
-                            <span>
-                                Web Development
-                            </span>
-
+                            <h3>Intro to Web Development</h3>
+                            <span>Web Development</span>
                         </div>
 
                     </div>
@@ -2768,15 +2277,8 @@
                         >
 
                         <div class="certificate-info">
-
-                            <h3>
-                                Conversational English Skills
-                            </h3>
-
-                            <span>
-                                English Communication
-                            </span>
-
+                            <h3>Conversational English Skills</h3>
+                            <span>English Communication</span>
                         </div>
 
                     </div>
@@ -2795,15 +2297,8 @@
                         >
 
                         <div class="certificate-info">
-
-                            <h3>
-                                Java Programming
-                            </h3>
-
-                            <span>
-                                Programming
-                            </span>
-
+                            <h3>Java Programming</h3>
+                            <span>Programming</span>
                         </div>
 
                     </div>
@@ -2876,11 +2371,10 @@
                         </h4>
 
                         <p>
-                            Security operations training covering
-                            SOC workflows, SIEM concepts, alert
-                            analysis, incident response, networking,
-                            Windows/Linux fundamentals and security
-                            monitoring.
+                            Security operations training covering SOC
+                            workflows, SIEM concepts, alert analysis,
+                            incident response, networking, Windows/Linux
+                            fundamentals and security monitoring.
                         </p>
 
                     </div>
@@ -2901,10 +2395,10 @@
                         </h4>
 
                         <p>
-                            Hands-on security learning covering
-                            SOC operations, SIEM alert triage,
-                            phishing analysis, Wireshark, EDR,
-                            SOAR and threat investigation.
+                            Hands-on security learning covering SOC
+                            operations, SIEM alert triage, phishing
+                            analysis, Wireshark, EDR, SOAR and threat
+                            investigation.
                         </p>
 
                     </div>
@@ -2925,11 +2419,10 @@
                         </h4>
 
                         <p>
-                            Developed an intelligent cybersecurity
-                            and code analysis system focused on
-                            vulnerability detection and security
-                            assessment using AI and cybersecurity
-                            techniques.
+                            Developed an intelligent cybersecurity and
+                            code analysis system focused on vulnerability
+                            detection and security assessment using AI
+                            and cybersecurity techniques.
                         </p>
 
                     </div>
@@ -2967,8 +2460,6 @@
                     <div class="contact-links">
 
 
-                        <!-- GITHUB -->
-
                         <a
                             class="contact-link"
                             href="https://github.com/shhroukalii"
@@ -2981,17 +2472,13 @@
                                 viewBox="0 0 24 24"
                                 fill="currentColor"
                             >
-
                                 <path d="M12 .5C5.65.5.5 5.65.5 12c0 5.08 3.29 9.39 7.85 10.91.57.1.78-.25.78-.55v-2.12c-3.2.69-3.87-1.54-3.87-1.54-.52-1.32-1.28-1.67-1.28-1.67-1.04-.71.08-.7.08-.7 1.15.08 1.75 1.18 1.75 1.18 1.02 1.75 2.67 1.25 3.32.96.1-.74.4-1.25.72-1.54-2.55-.29-5.23-1.27-5.23-5.66 0-1.25.45-2.27 1.18-3.07-.12-.29-.51-1.46.11-3.04 0 0 .96-.31 3.15 1.17a10.96 10.96 0 0 1 5.74 0c2.19-1.48 3.15-1.17 3.15-1.17.62 1.58.23 2.75.11 3.04.73.8 1.18 1.82 1.18 3.07 0 4.4-2.69 5.37-5.25 5.65.41.35.77 1.05.77 2.12v3.14c0 .3.21.66.79.55A10.99 10.99 0 0 0 23.5 12C23.5 5.65 18.35.5 12 .5Z"/>
-
                             </svg>
 
                             GitHub
 
                         </a>
 
-
-                        <!-- LINKEDIN -->
 
                         <a
                             class="contact-link"
@@ -3005,17 +2492,13 @@
                                 viewBox="0 0 24 24"
                                 fill="currentColor"
                             >
-
                                 <path d="M5.2 3.5A2.2 2.2 0 1 1 .8 3.5a2.2 2.2 0 0 1 4.4 0ZM1 8h4.2v13H1V8Zm6.8 0H12v1.8h.1c.58-1.1 2-2.25 4.1-2.25 4.38 0 5.2 2.88 5.2 6.62V21H17.2v-6.05c0-1.44-.03-3.3-2.02-3.3-2.02 0-2.33 1.58-2.33 3.2V21H7.8V8Z"/>
-
                             </svg>
 
                             LinkedIn
 
                         </a>
 
-
-                        <!-- GMAIL -->
 
                         <a
                             class="contact-link"
@@ -3029,7 +2512,6 @@
                                 stroke="currentColor"
                                 stroke-width="1.8"
                             >
-
                                 <rect
                                     x="2.5"
                                     y="4"
@@ -3039,15 +2521,12 @@
                                 />
 
                                 <path d="m4 7 8 6 8-6"/>
-
                             </svg>
 
                             Gmail
 
                         </a>
 
-
-                        <!-- WHATSAPP -->
 
                         <a
                             class="contact-link"
@@ -3062,9 +2541,7 @@
                                 viewBox="0 0 24 24"
                                 fill="currentColor"
                             >
-
                                 <path d="M20.52 3.48A11.87 11.87 0 0 0 12.08 0C5.52 0 .18 5.34.18 11.9c0 2.1.55 4.15 1.6 5.96L.07 24l6.3-1.65a11.9 11.9 0 0 0 5.7 1.45h.01c6.56 0 11.9-5.34 11.9-11.9 0-3.18-1.24-6.16-3.46-8.42ZM12.08 21.8a9.87 9.87 0 0 1-5.03-1.38l-.36-.21-3.74.98 1-3.65-.23-.37a9.88 9.88 0 0 1-1.52-5.27c0-5.47 4.45-9.92 9.93-9.92 2.65 0 5.14 1.03 7.01 2.91a9.86 9.86 0 0 1 2.9 7.02c0 5.47-4.45 9.92-9.92 9.92Zm5.44-7.43c-.3-.15-1.76-.87-2.03-.97-.27-.1-.47-.15-.67.15-.2.3-.77.97-.94 1.17-.17.2-.35.22-.65.07-.3-.15-1.25-.46-2.38-1.47-.88-.79-1.48-1.76-1.65-2.06-.17-.3-.02-.46.13-.61.13-.13.3-.35.45-.52.15-.17.2-.3.3-.5.1-.2.05-.37-.02-.52-.07-.15-.67-1.61-.92-2.2-.24-.58-.49-.5-.67-.51h-.57c-.2 0-.52.07-.79.37-.27.3-1.04 1.02-1.04 2.49s1.07 2.89 1.22 3.09c.15.2 2.1 3.21 5.09 4.5.71.31 1.27.49 1.7.63.72.23 1.38.2 1.9.12.58-.09 1.76-.72 2.01-1.41.25-.69.25-1.28.17-1.41-.07-.12-.27-.2-.57-.35Z"/>
-
                             </svg>
 
                             WhatsApp
@@ -3236,21 +2713,18 @@
         const mouseGlow =
             document.getElementById("mouseGlow");
 
-        window.addEventListener(
-            "mousemove",
-            function (event) {
+        window.addEventListener("mousemove", function (event) {
 
-                mouseGlow.style.left =
-                    event.clientX + "px";
+            mouseGlow.style.left =
+                event.clientX + "px";
 
-                mouseGlow.style.top =
-                    event.clientY + "px";
+            mouseGlow.style.top =
+                event.clientY + "px";
 
-            }
-        );
+        });
 
 
-        /* ================= REVEAL ANIMATION ================= */
+        /* ================= REVEAL ================= */
 
         const revealElements =
             document.querySelectorAll(".reveal");
@@ -3259,25 +2733,19 @@
             new IntersectionObserver(
                 function (entries) {
 
-                    entries.forEach(
-                        function (entry) {
+                    entries.forEach(function (entry) {
 
-                            if (
-                                entry.isIntersecting
-                            ) {
+                        if (entry.isIntersecting) {
 
-                                entry.target.classList.add(
-                                    "visible"
-                                );
+                            entry.target.classList.add("visible");
 
-                                revealObserver.unobserve(
-                                    entry.target
-                                );
-
-                            }
+                            revealObserver.unobserve(
+                                entry.target
+                            );
 
                         }
-                    );
+
+                    });
 
                 },
                 {
@@ -3285,64 +2753,69 @@
                 }
             );
 
-        revealElements.forEach(
-            function (element) {
+        revealElements.forEach(function (element) {
 
-                revealObserver.observe(
-                    element
-                );
+            revealObserver.observe(element);
 
-            }
-        );
+        });
 
 
         /* ================= PROFILE IMAGE ================= */
 
         const profileImage =
-            document.getElementById(
-                "profileImage"
-            );
+            document.getElementById("profileImage");
 
         const profileFallback =
-            document.getElementById(
-                "profileFallback"
-            );
+            document.getElementById("profileFallback");
 
-        profileImage.addEventListener(
-            "error",
-            function () {
+        profileImage.addEventListener("error", function () {
 
-                profileImage.style.display =
-                    "none";
+            profileImage.style.display = "none";
 
-                profileFallback.style.display =
-                    "flex";
+            profileFallback.style.display = "flex";
 
-            }
-        );
+        });
 
 
         /* ================= PROJECT IMAGES ================= */
 
-        document
-            .querySelectorAll(".work-project-image")
-            .forEach(
-                function (image) {
-
-                    image.addEventListener(
-                        "error",
-                        function () {
-
-                            console.error(
-                                "Project image not found:",
-                                image.getAttribute("src")
-                            );
-
-                        }
-                    );
-
-                }
+        const projectImages =
+            document.querySelectorAll(
+                ".work-project-image"
             );
+
+        projectImages.forEach(function (image) {
+
+            image.addEventListener("error", function () {
+
+                console.error(
+                    "Project image not found:",
+                    image.src
+                );
+
+                image.style.display = "none";
+
+                const message =
+                    document.createElement("div");
+
+                message.style.position = "absolute";
+                message.style.inset = "0";
+                message.style.display = "flex";
+                message.style.alignItems = "center";
+                message.style.justifyContent = "center";
+                message.style.color = "#ff76bd";
+                message.style.fontSize = "12px";
+                message.style.zIndex = "3";
+                message.textContent =
+                    "Project image not found";
+
+                image.parentElement.appendChild(
+                    message
+                );
+
+            });
+
+        });
 
 
         /* ================= CERTIFICATE MODAL ================= */
@@ -3372,91 +2845,41 @@
                 ".certificate-card"
             );
 
-        certificateCards.forEach(
-            function (card) {
 
-                const image =
-                    card.querySelector(
-                        ".certificate-image"
-                    );
+        certificateCards.forEach(function (card) {
 
-                image.addEventListener(
-                    "error",
-                    function () {
+            card.addEventListener("click", function () {
 
-                        image.style.display =
-                            "none";
+                const imagePath =
+                    card.dataset.image;
 
-                        const placeholder =
-                            document.createElement(
-                                "div"
-                            );
+                const title =
+                    card.dataset.title;
 
-                        placeholder.style.height =
-                            "190px";
+                certificateTitle.textContent =
+                    title;
 
-                        placeholder.style.display =
-                            "flex";
+                certificateModalImage.src =
+                    imagePath;
 
-                        placeholder.style.alignItems =
-                            "center";
+                certificateModalImage.alt =
+                    title;
 
-                        placeholder.style.justifyContent =
-                            "center";
-
-                        placeholder.style.color =
-                            "#ff76bd";
-
-                        placeholder.style.fontSize =
-                            "12px";
-
-                        placeholder.innerText =
-                            "Certificate image not found";
-
-                        image.parentNode.insertBefore(
-                            placeholder,
-                            image
-                        );
-
-                    }
+                certificateModal.classList.add(
+                    "show"
                 );
 
-                card.addEventListener(
-                    "click",
-                    function () {
-
-                        const imagePath =
-                            card.dataset.image;
-
-                        const title =
-                            card.dataset.title;
-
-                        certificateTitle.textContent =
-                            title;
-
-                        certificateModalImage.src =
-                            imagePath;
-
-                        certificateModalImage.alt =
-                            title;
-
-                        certificateModal.classList.add(
-                            "show"
-                        );
-
-                        certificateModal.setAttribute(
-                            "aria-hidden",
-                            "false"
-                        );
-
-                        document.body.style.overflow =
-                            "hidden";
-
-                    }
+                certificateModal.setAttribute(
+                    "aria-hidden",
+                    "false"
                 );
 
-            }
-        );
+                document.body.style.overflow =
+                    "hidden";
+
+            });
+
+        });
 
 
         function closeCertificateModal() {
@@ -3503,24 +2926,16 @@
         /* ================= WORK MODAL ================= */
 
         const workModal =
-            document.getElementById(
-                "workModal"
-            );
+            document.getElementById("workModal");
 
         const workClose =
-            document.getElementById(
-                "workClose"
-            );
+            document.getElementById("workClose");
 
         const workModalLabel =
-            document.getElementById(
-                "workModalLabel"
-            );
+            document.getElementById("workModalLabel");
 
         const workModalTitle =
-            document.getElementById(
-                "workModalTitle"
-            );
+            document.getElementById("workModalTitle");
 
         const workModalDescription =
             document.getElementById(
@@ -3528,18 +2943,14 @@
             );
 
         const workModalList =
-            document.getElementById(
-                "workModalList"
-            );
+            document.getElementById("workModalList");
 
 
         const workData = {
 
-
             calculator: {
 
-                label:
-                    "Development",
+                label: "Development",
 
                 title:
                     "Building a Calculator",
@@ -3559,8 +2970,7 @@
 
             database: {
 
-                label:
-                    "Database Project",
+                label: "Database Project",
 
                 title:
                     "Building a Company's Database using MySQL and SQL",
@@ -3581,21 +2991,20 @@
 
             fortress: {
 
-                label:
-                    "Graduation Project",
+                label: "Graduation Project",
 
                 title:
                     "Cyber AI Fortress",
 
                 description:
-                    "An intelligent cybersecurity and code analysis system designed to help identify vulnerabilities in source code and support security assessment through a combination of Artificial Intelligence and cybersecurity techniques.",
+                    "An intelligent cybersecurity and code analysis system designed to help identify vulnerabilities in source code and support security assessment through Artificial Intelligence and cybersecurity techniques.",
 
                 items: [
                     "Analyzed source code to identify potential security vulnerabilities.",
                     "Combined AI-based code analysis with static security metrics.",
                     "Used SAFE / VULNERABLE classification with confidence information and CWE references.",
-                    "Integrated security scanning concepts including OWASP ZAP for live security assessment.",
-                    "Built the project around modern web architecture with a dashboard and security-focused workflow."
+                    "Integrated security scanning concepts including OWASP ZAP.",
+                    "Built the project around a modern security-focused web architecture."
                 ]
 
             },
@@ -3603,8 +3012,7 @@
 
             securecorp: {
 
-                label:
-                    "Network Lab",
+                label: "Network Lab",
 
                 title:
                     "SecureCorp Network Lab",
@@ -3626,8 +3034,7 @@
 
             soc: {
 
-                label:
-                    "SOC Training",
+                label: "SOC Training",
 
                 title:
                     "SOC & Security Monitoring",
@@ -3649,8 +3056,7 @@
 
             "security-labs": {
 
-                label:
-                    "Security Labs",
+                label: "Security Labs",
 
                 title:
                     "Threat & Vulnerability Labs",
@@ -3674,85 +3080,70 @@
 
         document
             .querySelectorAll(".work-card")
-            .forEach(
-                function (card) {
+            .forEach(function (card) {
 
-                    card.addEventListener(
-                        "click",
-                        function () {
+                card.addEventListener(
+                    "click",
+                    function () {
 
-                            const key =
-                                card.dataset.work;
+                        const key =
+                            card.dataset.work;
 
-                            const data =
-                                workData[key];
+                        const data =
+                            workData[key];
 
-                            if (!data) {
-                                return;
-                            }
-
-                            workModalLabel.textContent =
-                                data.label;
-
-                            workModalTitle.textContent =
-                                data.title;
-
-                            workModalDescription.textContent =
-                                data.description;
-
-                            workModalList.innerHTML =
-                                "";
-
-                            data.items.forEach(
-                                function (item) {
-
-                                    const div =
-                                        document.createElement(
-                                            "div"
-                                        );
-
-                                    div.textContent =
-                                        item;
-
-                                    workModalList.appendChild(
-                                        div
-                                    );
-
-                                }
-                            );
-
-                            workModal.classList.add(
-                                "show"
-                            );
-
-                            workModal.setAttribute(
-                                "aria-hidden",
-                                "false"
-                            );
-
-                            document.body.style.overflow =
-                                "hidden";
-
+                        if (!data) {
+                            return;
                         }
-                    );
 
-                }
-            );
+                        workModalLabel.textContent =
+                            data.label;
+
+                        workModalTitle.textContent =
+                            data.title;
+
+                        workModalDescription.textContent =
+                            data.description;
+
+                        workModalList.innerHTML = "";
+
+                        data.items.forEach(function (item) {
+
+                            const div =
+                                document.createElement("div");
+
+                            div.textContent = item;
+
+                            workModalList.appendChild(div);
+
+                        });
+
+                        workModal.classList.add("show");
+
+                        workModal.setAttribute(
+                            "aria-hidden",
+                            "false"
+                        );
+
+                        document.body.style.overflow =
+                            "hidden";
+
+                    }
+                );
+
+            });
 
 
         function closeWorkModal() {
 
-            workModal.classList.remove(
-                "show"
-            );
+            workModal.classList.remove("show");
 
             workModal.setAttribute(
                 "aria-hidden",
                 "true"
             );
 
-            document.body.style.overflow =
-                "";
+            document.body.style.overflow = "";
 
         }
 
@@ -3783,19 +3174,13 @@
         /* ================= SKILL MODAL ================= */
 
         const skillModal =
-            document.getElementById(
-                "skillModal"
-            );
+            document.getElementById("skillModal");
 
         const skillClose =
-            document.getElementById(
-                "skillClose"
-            );
+            document.getElementById("skillClose");
 
         const skillModalTitle =
-            document.getElementById(
-                "skillModalTitle"
-            );
+            document.getElementById("skillModalTitle");
 
         const skillModalDescription =
             document.getElementById(
@@ -3803,18 +3188,14 @@
             );
 
         const skillModalTags =
-            document.getElementById(
-                "skillModalTags"
-            );
+            document.getElementById("skillModalTags");
 
 
         const skillData = {
 
-
             soc: {
 
-                title:
-                    "SOC Analysis",
+                title: "SOC Analysis",
 
                 description:
                     "Practical exposure to SOC workflows, alert triage, security monitoring, SIEM concepts, investigation and incident response processes.",
@@ -3832,8 +3213,7 @@
 
             network: {
 
-                title:
-                    "Network Security",
+                title: "Network Security",
 
                 description:
                     "Understanding of networking fundamentals and secure infrastructure through practical labs and enterprise-style network environments.",
@@ -3852,8 +3232,7 @@
 
             vulnerability: {
 
-                title:
-                    "Vulnerability Assessment",
+                title: "Vulnerability Assessment",
 
                 description:
                     "Experience identifying and analyzing security weaknesses using vulnerability scanning and security assessment tools.",
@@ -3870,8 +3249,7 @@
 
             web: {
 
-                title:
-                    "Web Security",
+                title: "Web Security",
 
                 description:
                     "Knowledge of web security concepts and practical exposure to application security testing and OWASP-based techniques.",
@@ -3888,8 +3266,7 @@
 
             linux: {
 
-                title:
-                    "Linux",
+                title: "Linux",
 
                 description:
                     "Working knowledge of Linux environments used for cybersecurity labs, security testing and investigation.",
@@ -3906,11 +3283,10 @@
 
             tools: {
 
-                title:
-                    "Security Tools",
+                title: "Security Tools",
 
                 description:
-                    "Hands-on exposure to a range of cybersecurity tools used for network analysis, vulnerability assessment and security testing.",
+                    "Hands-on exposure to cybersecurity tools used for network analysis, vulnerability assessment and security testing.",
 
                 tags: [
                     "Wireshark",
@@ -3926,8 +3302,7 @@
 
             programming: {
 
-                title:
-                    "Programming",
+                title: "Programming",
 
                 description:
                     "Programming experience across Python, Java, C#, SQL and web technologies, with a focus on practical problem solving.",
@@ -3945,8 +3320,7 @@
 
             ai: {
 
-                title:
-                    "AI Security",
+                title: "AI Security",
 
                 description:
                     "Exploring the use of Artificial Intelligence in cybersecurity, particularly vulnerability detection and intelligent security analysis.",
@@ -3966,85 +3340,71 @@
 
         document
             .querySelectorAll(".skill-card")
-            .forEach(
-                function (card) {
+            .forEach(function (card) {
 
-                    card.addEventListener(
-                        "click",
-                        function () {
+                card.addEventListener(
+                    "click",
+                    function () {
 
-                            const key =
-                                card.dataset.skill;
+                        const key =
+                            card.dataset.skill;
 
-                            const data =
-                                skillData[key];
+                        const data =
+                            skillData[key];
 
-                            if (!data) {
-                                return;
-                            }
-
-                            skillModalTitle.textContent =
-                                data.title;
-
-                            skillModalDescription.textContent =
-                                data.description;
-
-                            skillModalTags.innerHTML =
-                                "";
-
-                            data.tags.forEach(
-                                function (tag) {
-
-                                    const span =
-                                        document.createElement(
-                                            "span"
-                                        );
-
-                                    span.className =
-                                        "modal-tag";
-
-                                    span.textContent =
-                                        tag;
-
-                                    skillModalTags.appendChild(
-                                        span
-                                    );
-
-                                }
-                            );
-
-                            skillModal.classList.add(
-                                "show"
-                            );
-
-                            skillModal.setAttribute(
-                                "aria-hidden",
-                                "false"
-                            );
-
-                            document.body.style.overflow =
-                                "hidden";
-
+                        if (!data) {
+                            return;
                         }
-                    );
 
-                }
-            );
+                        skillModalTitle.textContent =
+                            data.title;
+
+                        skillModalDescription.textContent =
+                            data.description;
+
+                        skillModalTags.innerHTML = "";
+
+                        data.tags.forEach(function (tag) {
+
+                            const span =
+                                document.createElement("span");
+
+                            span.className =
+                                "modal-tag";
+
+                            span.textContent =
+                                tag;
+
+                            skillModalTags.appendChild(span);
+
+                        });
+
+                        skillModal.classList.add("show");
+
+                        skillModal.setAttribute(
+                            "aria-hidden",
+                            "false"
+                        );
+
+                        document.body.style.overflow =
+                            "hidden";
+
+                    }
+                );
+
+            });
 
 
         function closeSkillModal() {
 
-            skillModal.classList.remove(
-                "show"
-            );
+            skillModal.classList.remove("show");
 
             skillModal.setAttribute(
                 "aria-hidden",
                 "true"
             );
 
-            document.body.style.overflow =
-                "";
+            document.body.style.overflow = "";
 
         }
 
@@ -4078,9 +3438,7 @@
             "keydown",
             function (event) {
 
-                if (
-                    event.key !== "Escape"
-                ) {
+                if (event.key !== "Escape") {
                     return;
                 }
 
@@ -4104,54 +3462,45 @@
                 ".nav-links a"
             );
 
+
         window.addEventListener(
             "scroll",
             function () {
 
-                let current =
-                    "home";
+                let current = "home";
 
-                sections.forEach(
-                    function (section) {
+                sections.forEach(function (section) {
 
-                        const top =
-                            section.offsetTop - 150;
+                    const top =
+                        section.offsetTop - 150;
 
-                        if (
-                            window.scrollY >=
-                            top
-                        ) {
+                    if (
+                        window.scrollY >=
+                        top
+                    ) {
 
-                            current =
-                                section.id;
-
-                        }
+                        current =
+                            section.id;
 
                     }
-                );
 
-                navItems.forEach(
-                    function (link) {
+                });
 
-                        link.classList.remove(
-                            "active"
-                        );
 
-                        if (
-                            link.getAttribute(
-                                "href"
-                            ) ===
-                            "#" + current
-                        ) {
+                navItems.forEach(function (link) {
 
-                            link.classList.add(
-                                "active"
-                            );
+                    link.classList.remove("active");
 
-                        }
+                    if (
+                        link.getAttribute("href") ===
+                        "#" + current
+                    ) {
+
+                        link.classList.add("active");
 
                     }
-                );
+
+                });
 
             }
         );
